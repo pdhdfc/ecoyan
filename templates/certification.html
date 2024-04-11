@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<style>
+    .gallery-container {
+        text-align: center;
+        margin-top: 50px;
+      }
+      
+      .gallery img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      }
+      
+</style>
+</br></br></br></br></br></br></br>
+<div class="gallery-container">
+  <h2 style="font-size: 24px; margin-bottom: 10px;">ARAI & ISO Approved E-rickshaw / E-cart</h2>
+  <p style="font-size: 18px; margin-bottom: 20px;">E-rickshaw / E-cart – Approved by Automotive Research Association of India (ARAI) & RTO Karnataka</p>
+  <div class="gallery">
+    <img src="https://i.ibb.co/j6p90r9/your-image.jpg" alt="E-rickshaw / E-cart" style="width: 70%; max-width: 600px;">
+  </div>
+</div>
+</br></br></br></br></br></br></br>
+{% endblock %}

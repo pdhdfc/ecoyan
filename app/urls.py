@@ -1,11 +1,29 @@
+# In urls.py
 
 from django.urls import path
+from django.http import HttpResponse
+
+# Import your views module
 from . import views
 
-from django.conf import settings
-from django.conf.urls.static import static
-urlpatterns = [
+# Define a view to serve the sitemap.xml file
+def sitemap_xml(request):
+    # Read the sitemap.xml file
+    with open('sitemap.xml', 'r') as file:
+        sitemap_xml = file.read()
+    return HttpResponse(sitemap_xml, content_type='application/xml')
 
+from django.urls import path
+from django.http import HttpResponse
+
+# Define a view to serve the robots.txt file
+def robots_txt(request):
+    # Read the robots.txt file
+    with open('robots.txt', 'r') as file:
+        robots_txt = file.read()
+    return HttpResponse(robots_txt, content_type='text/plain')
+
+urlpatterns = [
     path('', views.index, name='index'),
     path('about', views.about, name='about'),
     path('contact', views.contact, name='contact'),
@@ -18,10 +36,8 @@ urlpatterns = [
     path('e_garbage', views.e_garbage, name='e_garbage'),
     path('golf_cart', views.golf_cart, name='golf_cart'),
     path('car', views.car, name='car'),
+    # Define the URL pattern for sitemap.xml
+    path('sitemap.xml', sitemap_xml, name='sitemap_xml'),
+    path('robots.txt', robots_txt, name='robots_txt'),
 ]
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-    
-
-    

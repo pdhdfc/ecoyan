@@ -7,8 +7,8 @@ def index(request):
 def about(request):
     return render(request, 'about-us.html')
 
-def contact(request):
-    return render(request, 'contact.html')
+# def contact(request):
+#     return render(request, 'contact.html')
 
 def why_ecoyan(request):
     return render(request, 'why-ecoyan.html')
@@ -39,4 +39,33 @@ def car(request):
     return render(request, 'car.html')
 
 
+
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from .forms import ContactForm
+
+# views.py
+
+from django.shortcuts import render
+from django.http import JsonResponse
+from .models import ContactMessage
+
+from django.shortcuts import redirect
+
+def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('Name')
+        email = request.POST.get('Email')
+        phone = request.POST.get('phone')
+        message = request.POST.get('message')
+        try:
+            ContactMessage.objects.create(name=name, email=email, phone=phone, message=message)
+            return redirect('success')  # Redirect to success page
+        except:
+            return JsonResponse({'success': False})
+    return render(request, 'contact.html') 
+
+def success_view(request):
+    return render(request, 'success.html')
 

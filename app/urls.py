@@ -27,6 +27,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('about', views.about, name='about'),
     path('contact', views.contact, name='contact'),
+    path('success', views.success_view, name='success'),
     path('why_ecoyan', views.why_ecoyan, name='why_ecoyan'),
     path('certification', views.certification, name='certification'),
     path('customers', views.customers, name='customers'),

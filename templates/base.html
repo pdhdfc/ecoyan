@@ -46,9 +46,9 @@
                 <div class="container">
                     <div class="topbar-left xs-hide">
                         <div class="topbar-widget">
-                            <div class="topbar-widget"><a href="#"><i class="fa fa-phone"></i>+91 8296144400</a></div>
+                            <div class="topbar-widget"><a href="#"><i class="fa fa-phone"></i>+91 9513396282</a></div>
                             <div class="topbar-widget"><a href="#"><i class="fa fa-envelope"></i>info@ecoyan.in</a></div>
-                            <div class="topbar-widget"><a href="#"><i class="fa fa-clock-o"></i>Mon - Fri 08.00 - 18.00</a></div>
+                            <div class="topbar-widget"><a href="#"><i class="fa fa-clock-o"></i>Mon - Sat 10.00 - 7.00</a></div>
                         </div>
                     </div>
                 
@@ -91,7 +91,7 @@
                                             <li><a class="menu-item" href="e_cargo">E-CARGO</a></li>
                                             <li><a class="menu-item" href="e_garbage">E-GARBAGE</a></li>
                                             <li><a class="menu-item" href="golf_cart">GOLF CART</a></li>
-                                            <li><a class="menu-item" href="car">CAR</a></li>
+                                            {% comment %} <li><a class="menu-item" href="car">CAR</a></li> {% endcomment %}
                                             <li><a class="menu-item" href="{% static 'pdf/Components.pdf' %}" target="_blank">COMPONENTS</a></li>
                                             <li><a class="menu-item" href="{% static 'pdf/Ecoyan-Catalogue.pdf' %}" target="_blank">E-CATALOGUE</a></li>
                                             <li><a class="menu-item" href="contact">TEST DRIVE REQUEST</a></li>
@@ -115,12 +115,16 @@
                                         <ul>
                                             <li><a  class="menu-item" href="about">ABOUT US</a>
                                                 
-                                            </li>
+                                            {% comment %} </li>
                                             <li><a class="menu-item" href="why_ecoyan">WHY ECOYAN</a>
                                                 
-                                            </li>
-                                            <li><a class="menu-item" href="certification">CERTIFICATION</a>
-                                                
+                                            </li> {% endcomment %}
+                                            <li><a class="menu-item" href="#">CERTIFICATION</a>
+                                                <ul>
+                                                    <li><a class="menu-item" href="{% static 'pdf/ARAI_Certificate_Ecoyan_EA.pdf' %}" target="_blank">ARAI Certificate EA</a></li>
+                                                    <li><a class="menu-item" href="{% static 'pdf/ARAI_Certificate_Ecoyan_EL.pdf' %}" target="_blank">ARAI Certificate EL</a></li>
+                                                    <li><a class="menu-item" href="{% static 'pdf/Trade_Certificate_Ecoyan_EA&EL.pdf' %}" target="_blank">Trade Certificate EA & EL</a></li>
+                                                </ul>
                                             </li>
                                         </ul>
                                     </li>
@@ -160,7 +164,7 @@
                                 Call Us Now
                             </span>
                             <span class="pnb-num">
-                                +91 8296144400
+                                +91 9513396282
                             </span>
                         </div>
                         <a href="contact" class="btn-main">Contact Us</a>
@@ -178,7 +182,7 @@
                         <div class="widget">
                             <h5>About ecoyan</h5>
                             <p>We offer customers a wide range of electric motor vehicles. and Manufacturing customised services and fulfils the customer requirements.</p>
-                            <span><i class="id-color fa fa-phone fa-lg"></i>+91 8296144400</span></br>
+                            <span><i class="id-color fa fa-phone fa-lg"></i>+91 9513396282</span></br>
                                 <span><i class="id-color fa fa-envelope-o fa-lg"></i><a href="mailto:info@ecoyan.in">   info@ecoyan.in</a></span></br>
                                 <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="#">   Download Brochure</a></span>
                         </div>
@@ -188,7 +192,7 @@
                         <div class="widget">
                             <h5>Contact Info</h5>
                             <address class="s1">
-                                <h6>Head Office-</h6>
+                                {% comment %} <h6>Head Office-</h6> {% endcomment %}
                                 <span><i class="id-color fa fa-map-marker fa-lg"></i>754/1, 3rd Floor, 19th Main, 22nd Cross, Sector 2, HSR Layout, Bengaluru-560102</span></br>
                                 <h6>Manufacturing Unit-</h6>
                                 <span><i class="id-color fa fa-map-marker fa-lg"></i>No 22, 4th cross, Near Muneshwara Temple, Huskur Gate, Hosur Main Road, Electronic City Phase 2, Bengaluru-560100</span>

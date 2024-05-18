@@ -182,9 +182,10 @@
                         <div class="widget">
                             <h5>About ecoyan</h5>
                             <p>We offer customers a wide range of electric motor vehicles. and Manufacturing customised services and fulfils the customer requirements.</p>
-                            <span><i class="id-color fa fa-phone fa-lg"></i>+91 9513396282</span></br>
+                            <span><i class="id-color fa fa-phone fa-lg"></i>+91 9513396282<b>-</b> <b>Sales and Marketing</b></span></br>
+                            <span><i class="id-color fa fa-phone fa-lg"></i>+91 9513396283 <b>-</b> <b>Support and Service</b> </span>
                                 <span><i class="id-color fa fa-envelope-o fa-lg"></i><a href="mailto:info@ecoyan.in">   info@ecoyan.in</a></span></br>
-                                <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="#">   Download Brochure</a></span>
+                                <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="{% static 'pdf/Ecoyan-Catalogue.pdf' %}" target="_blank">   Download Brochure</a></span>
                         </div>
                     </div>
                     
@@ -195,7 +196,7 @@
                                 {% comment %} <h6>Head Office-</h6> {% endcomment %}
                                 <span><i class="id-color fa fa-map-marker fa-lg"></i>754/1, 3rd Floor, 19th Main, 22nd Cross, Sector 2, HSR Layout, Bengaluru-560102</span></br>
                                 <h6>Manufacturing Unit-</h6>
-                                <span><i class="id-color fa fa-map-marker fa-lg"></i>No 22, 4th cross, Near Muneshwara Temple, Huskur Gate, Hosur Main Road, Electronic City Phase 2, Bengaluru-560100</span>
+                                <span><i class="id-color fa fa-map-marker fa-lg"></i>No 52, 4th cross, Near Muneshwara Temple, Huskur Gate, Hosur Main Road, Electronic City Phase 2, Bengaluru-560100</span>
                                 
                             </address>
                         </div>
@@ -267,6 +268,35 @@
     ================================================== -->
     <script src="{% static 'js/plugins.js' %}"></script>
     <script src="{% static 'js/designesia.js' %}"></script>
+
+
+    <style>
+        .whatsappk{
+           position: fixed;
+           bottom: -38px;
+           right: -22px;
+        
+        }
+    </style>
+    <div class="whatsappk">
+        <a href="https://wa.me/919513396282?text=Hi, could you provide assistance regarding the Services?" target="_blank">
+           <img src="{% static 'images/chat.png' %}" width="120" alt="" ></img>
+        </a>
+    </div>
+     
+    {% comment %} <style>
+        .callpk{
+           position: fixed;
+           bottom: 1px;
+           right: 1px;
+        
+        }
+    </style>
+    <div class="callpk">
+        <a href="tel:+91 9513396282">
+           <img src="{% static 'images/call.png' %}" width="60" alt=""></img>
+        </a>
+    </div> {% endcomment %}
 
 </body>
 

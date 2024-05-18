@@ -15,7 +15,7 @@ def sitemap_xml(request):
 
 from django.urls import path
 from django.http import HttpResponse
-
+from django.conf.urls import handler404
 # Define a view to serve the robots.txt file
 def robots_txt(request):
     # Read the robots.txt file
@@ -42,3 +42,6 @@ urlpatterns = [
     path('robots.txt', robots_txt, name='robots_txt'),
 ]
 
+
+
+handler404 = 'app.views.custom_404_view'

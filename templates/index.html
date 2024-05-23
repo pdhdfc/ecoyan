@@ -1,16 +1,31 @@
 {% extends "base.html" %}
 {% load static %}
 
-
+{% block title %}
+Ecoyan: Leading India's Electric Vehicle Revolution with Innovative Manufacturing and Top-Notch Service
+{% endblock %}
 
 {% block content %}
         
         <!-- content begin -->
         <div class="no-bottom no-top" id="content">
             <div id="top"></div>
-            
+                      <style>
+                        #section-hero {
+                          background-image: url('path/to/your/image.jpg');
+                          background-position: bottom;
+                          background-size: cover;
+                      }
+                      
+                      @media (max-width: 768px) {
+                          #section-hero {
+                              background-image: none;
+                          }
+                      }
+                      
+                      </style>
                     {% comment %} <section id="section-hero" aria-label="section" class="full-height vertical-center" > {% endcomment %}
-                    <section id="section-hero" aria-label="section" class="full-height vertical-center" data-bgimage="url({% static 'images/background/7.jpg' %}) bottom">
+                      <section id="section-hero" aria-label="section" class="full-height vertical-center" data-bgimage="url({% static 'images/background/7.jpg' %}) bottom">
                         <div class="container">
                             <div class="row align-items-center">
                                 <div class="spacer-double sm-hide"></div>
@@ -523,16 +538,25 @@
 
                         <div class="row">
 
-
+                          <style>
+                            .product img {
+                              padding: -45px;
+                              background: #ffffff;
+                              /* border: solid 1px #fff; */
+                          }
+                          
+                          
+                          </style>
                           <div class="col-lg-3">
                             <!-- Product 4 -->
+                            <a href="e_rickshaw">
                             <div class="product">
                               
                                 <div class="parent">
 
                                     <div class="card">
                                       
-                                        <img src="https://i.ibb.co/ygZ1d55/Whats-App-Image-2024-05-21-at-5-48-29-PM.jpg" alt="Description of the image" class="img-fluid">
+                                        <img src="https://i.ibb.co/qdHzYgY/e-rickshaw.png" alt="Description of the image" class="img-fluid">
                                     
                                         <h3>
                                           E- Rickshaw</h3> 
@@ -540,17 +564,19 @@
                                     
                                 </div>
                             </div>
+                          </a>
                         </div>
 
                         <div class="col-lg-3">
                           <!-- Product 4 -->
+                          <a href="e_cargo">
                           <div class="product">
                             
                               <div class="parent">
 
                                   <div class="card">
                                     
-                                      <img src="https://i.ibb.co/bvVH344/e-cargo-1.png" alt="Description of the image" class="img-fluid">
+                                      <img src="https://i.ibb.co/jWtf4fd/e-cargo.png" alt="Description of the image" class="img-fluid">
                                   
                                       <h3>
                                         E- Cargo</h3> 
@@ -558,16 +584,18 @@
                                   
                               </div>
                           </div>
+                        </a>
                       </div>
                       <div class="col-lg-3">
                         <!-- Product 4 -->
+                        <a href="e_garbage">
                         <div class="product">
                           
                             <div class="parent">
 
                                 <div class="card">
                                   
-                                    <img src="https://i.ibb.co/dbWpV8G/E-Garbage.png" alt="Description of the image" class="img-fluid">
+                                    <img src="https://i.ibb.co/1R6ws5s/E-Garbage.png" alt="Description of the image" class="img-fluid">
                                 
                                     <h3>
                                       E- Garbage</h3> 
@@ -575,9 +603,11 @@
                                 
                             </div>
                         </div>
+                      </a>
                     </div>
 
                             <div class="col-lg-3">
+                              <a href="golf_cart">
                                 <!-- Product 4 -->
                                 <div class="product">
                                   
@@ -585,13 +615,14 @@
 
                                         <div class="card">
                                           
-                                            <img src="https://i.ibb.co/nDK9nvK/Golf-Cart.png" alt="Description of the image" class="img-fluid">
+                                            <img src="https://i.ibb.co/Kb0KrZd/Golf-Cart.png" alt="Description of the image" class="img-fluid">
                                         
                                             <h3>Golf-Cart</h3>
                                         </div>
                                         
                                     </div>
                                 </div>
+                              </a>
                             </div>
 
                             
@@ -608,9 +639,21 @@
                 <div class="row">
                   <!-- Video Section -->
                   
+                  <style>
+                    .image-container {
+                        display: flex;
+                        justify-content: center;
+                        margin: 20px;
+                    }
+                    @media only screen and (max-width: 768px) {
+                        .image-container {
+                            display: none;
+                        }
+                    }
+                </style>
                   
-                  <div class="col-lg-6">
-                    <div class="image-container" style="display: flex; justify-content: center; margin: 20px;">
+                <div class="col-lg-6">
+                    <div class="image-container">
                         <div id="player"></div>
                     </div>
                 </div>
@@ -618,7 +661,8 @@
             
                   <!-- Content Section -->
                   <div class="col-lg-6">
-                    <h2>Excellence at Every Turn: Our Dedication to Quality</h2>
+                    
+                    <h2 style="margin-top: -79px;">Excellence at Every Turn: Our Dedication to Quality</h2>
                     <div class="spacer-20"></div>
                     <div class="tab-content" id="pills-tabContent">
                       <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
@@ -875,10 +919,11 @@
 
             <section id="section-fun-facts" class="bg-color text-light">
                 <div class="container">
-                    <div class="row g-custom-x force-text-center">
+                  {% comment %} <div class="row g-custom-x force-text-center"> 4 box {% endcomment %}
+                    <div class="row g-custom-x text-center justify-content-center">
                         <div class="col-md-3 col-sm-6 mb-sm-30">
                             <div class="de_count wow fadeInUp">
-                                <h3 class="timer" data-to="8" data-speed="3000">0</h3>
+                                <h3 class="timer" data-to="8" data-speed="3000">8+ </h3>
                                 YEARS OF SUCCESSFUL OPERATIONS:
 
                                 <p class="d-small">With over 8 years of successful operations, Ecoyan has consistently delivered excellence in electric mobility. Trusted by many, our experience speaks volumes about our commitment to quality and innovation
@@ -887,7 +932,7 @@
                         </div>
                         <div class="col-md-3 col-sm-6 mb-sm-30">
                             <div class="de_count wow fadeInUp">
-                                <h3 class="timer" data-to="1000" data-speed="3000">0</h3>
+                                <h3 class="timer" data-to="1000" data-speed="3000">1000+</h3>
                                 VEHICLES CREATING A GREEN IMPACT:
 
                                 <p class="d-small">Zooming past the 1000+ vehicles making a green and clean impact, Ecoyan is driving a vibrant ecological revolution. Jump aboard and be part of our eco-conscious journey towards a greener tomorrow!
@@ -897,7 +942,7 @@
                         
                         <div class="col-md-3 col-sm-6 mb-sm-30">
                             <div class="de_count wow fadeInUp">
-                                <h3 class="timer" data-to="10" data-speed="3000">0</h3>
+                                <h3 class="timer" data-to="10" data-speed="3000">10+</h3>
                                 GOVT AGENCIES TRUSTING OUR PRODUCTS:
                                 <p class="d-small">With a strong trust from over 10 government agencies, Ecoyan's products shine as beacons of reliability and innovation. Join the ranks of those who trust us to lead the way to a sustainable future!
                                 </p>

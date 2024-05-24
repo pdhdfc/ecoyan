@@ -43,11 +43,59 @@
     <div id="wrapper">
         
         <!-- page preloader begin -->
-        <div id="de-preloader"></div>
+        {% comment %} <div id="de-preloader"></div> {% endcomment %}
+        <style>
+        
+
+        #loaderr-wrapper {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: white; /* Background color to cover the content while loading */
+          z-index: 1000; /* Ensure it's above other content */
+        }
+    
+        #loaderr {
+          width: 1000px;
+          height: 100px;
+        }
+    
+        #loaderr img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+    
+       
+      </style>
+    
+      <!-- Loader Wrapper -->
+      <div id="loaderr-wrapper">
+        <!-- Loader Image -->
+        <div id="loaderr">
+          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a2c99638830641.577126a36dd77.gif" alt="Loading...">
+        </div>
+      </div>
+    
+    
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Simulate a delay to show the loader
+          setTimeout(function() {
+            document.getElementById('loaderr-wrapper').style.display = 'none';
+            document.getElementById('topb').style.display = 'block';
+          }, 100); // 1 second delay for demonstration purposes
+        });
+      </script>
         <!-- page preloader close -->
 
         <!-- header begin -->
-        <header class="transparent header-light scroll-light has-topbar">
+        <header id="topb"class="transparent header-light scroll-light has-topbar">
             <div id="topbar" class="topbar-dark text-light">
                 <div class="container">
                     <div class="topbar-left xs-hide">
@@ -96,7 +144,7 @@
                             </div>
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
-                                    <li><a  href="/">Home</a>
+                                    <li><a class="menu-item" href="/">Home</a>
                                         
                                     </li>
                                     <li><a class="menu-item" href="#">Products</a>
@@ -108,7 +156,7 @@
                                             {% comment %} <li><a class="menu-item" href="car">CAR</a></li> {% endcomment %}
                                             <li><a class="menu-item" href="{% static 'pdf/Components.pdf' %}" target="_blank">COMPONENTS</a></li>
                                             <li><a class="menu-item" href="{% static 'pdf/Ecoyan-Catalogue.pdf' %}" target="_blank">E-CATALOGUE</a></li>
-                                            <li><a class="menu-item" href="contact">TEST DRIVE REQUEST</a></li>
+                                            {% comment %} <li><a class="menu-item" href="contact">TEST DRIVE REQUEST</a></li> {% endcomment %}
                                             
                                         </ul>
                                     </li>
@@ -119,12 +167,17 @@
                                             <li><a class="menu-item" href="https://www.youtube.com/@ecoyanbangalore1776/videos" target="_blank">VIDEOS</a></li>
                                         </ul>
                                     </li>
-                                    <li><a  href="contact">Dealer</a>
+                                    <li><a class="menu-item" href="dealer">Dealer</a>
                                         
                                     </li>
+                                    <li><a class="menu-item" href="contact">Test Drive Request</a>
+                                        
+                                    </li>
+                                        
+                                    {% comment %} </li>
                                     <li><a href="customers">Customers</a>
                                         
-                                    </li>
+                                    </li> {% endcomment %}
                                     <li><a class="menu-item" href="about">About Us</a>
                                         <ul>
                                             <li><a  class="menu-item" href="about">ABOUT US</a>
@@ -142,7 +195,8 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact">Contact Us</a>
+                                    <li><a class="menu-item" href="contact">Contact Us</a>
+                                    
                                         
                                     </li>
                                    

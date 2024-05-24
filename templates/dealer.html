@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+
+{% endblock %}
+
+
+{% block content %}
+        
+ <!-- content begin -->
+ <div class="no-bottom no-top" id="content">
+    <div id="top"></div>
+    
+    <!-- section begin -->
+    <section id="subheader" class="jarallax text-light">
+        <img src="{% static 'images/background/subheader.jpg' %}" class="jarallax-img" alt="">
+            <div class="center-y relative text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h1>Dealer</h1>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- section close -->
+    
+    <section aria-label="section">
+        <div class="container">
+            <div class="col-lg-3">
+                
+                <div class="hee">
+                    <h2>Become A Dealer
+                    </h2>
+                </div>
+                <div class="spacer-20"></div>
+            </div>
+            
+            <div class="row">
+                
+                <style>
+                    .ffd {
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                </style>
+                <div class="ffd">
+                    <h3>Why Us: </h3>
+                </div>
+            <div class="col-md-3">
+                <i class="fa fa-rocket de-icon mb20"></i>
+                <h4>Best in class-power (1200 watt motor)</h4>
+                <p>Experience unmatched performance with Ecoyan&#39;s best-in-class 1200-watt motor. While
+                  others offer 1000 watts, our powerful motor ensures superior speed, efficiency, and
+                  reliability for a smoother, more exhilarating ride every time.</p>
+            </div>
+            <div class="col-md-3">
+                <i class="fa fa-battery de-icon mb20"></i>
+                <h4>Spectacular Battery Life:</h4>
+                <p>Enjoy long-lasting power with Ecoyan&#39;s e-vehicles, delivering
+                  over 80 kilometers on a single full charge. Experience the freedom of extended range,
+                  ensuring your journeys are uninterrupted and efficient.</p>
+            </div>
+            <div class="col-md-3">
+                <i class="fa fa-industry de-icon mb20"></i>
+                <h4>State-of-the-art manufacturing.</h4>
+                <p>Crafted with cutting-edge precision, Ecoyan&#39;s e-vehicles undergo rigorous safety
+                  tests to ensure top-tier reliability. Experience the thrill of state-of-the-art manufacturing
+                  where every detail is fine-tuned for your ultimate peace of mind and enjoyment!</p>
+            </div>
+            <div class="col-md-3">
+                <i class="fa fa-industry de-icon mb20"></i>
+                <h4>State-of-the-art manufacturing.</h4>
+                <p>Crafted with cutting-edge precision, Ecoyan&#39;s e-vehicles undergo rigorous safety
+                  tests to ensure top-tier reliability. Experience the thrill of state-of-the-art manufacturing
+                  where every detail is fine-tuned for your ultimate peace of mind and enjoyment!</p>
+            </div>
+        </div>
+        <style>
+            .ffd {
+                text-align: center;
+                font-weight: bold;
+            }
+        </style>
+        <div class="ffd">
+            <p>With revolutionizing the automotive segment with cutting edge technology, </br>Ecoyan Electric will be your partner in success.</p>
+        </div>
+                <div class="row g-custom-x">
+                    
+                    <div class="col-lg-8 mb-sm-30">
+
+                     {% comment %} <h3>Do you have any question?</h3> {% endcomment %}
+                    
+                     <form name="contactForm" id="contact_form" class="form-border" method="post" action="#">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-4 mb10">
+                                <div class="field-set">
+                                    <input type="text" name="Name" id="name" class="form-control" placeholder="Your Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb10">
+                                <div class="field-set">
+                                    <input type="email" name="Email" id="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb10">
+                                <div class="field-set">
+                                    <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="field-set mb20">
+                            <textarea name="message" id="message" class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="6LdW03QgAAAAAJko8aINFd1eJUdHlpvT4vNKakj6"></div>
+                        <div id='submit' class="mt20">
+                            <input type='submit' id='send_message' value='Send Message' class="btn-main">
+                        </div>
+                    
+                        <div id="success_message" class='success'>
+                            Your message has been sent successfully. Refresh this page if you want to send more messages.
+                        </div>
+                        <div id="error_message" class='error'>
+                            Sorry there was an error sending your form.
+                        </div>
+                    </form>
+                    
+                </div>
+                
+                <div class="col-lg-4">
+
+                    <div class="de-box mb30">
+                        <h4>Head Office</h4>
+                        <address class="s1">
+                            {% comment %} <h6>Head Office-</h6> {% endcomment %}
+                                <span><i class="id-color fa fa-map-marker fa-lg"></i>754/1, 3rd Floor, 19th Main, 22nd Cross, Sector 2, HSR Layout, Bengaluru-560102</span></br>
+                                {% comment %} <h4>Manufacturing Unit</h4>
+                                <span><i class="id-color fa fa-map-marker fa-lg"></i>No 22, 4th cross, Near Muneshwara Temple, Huskur Gate, Hosur Main Road, Electronic City Phase 2, Bengaluru-560100</span> {% endcomment %}
+                            {% comment %} <span><i class="id-color fa fa-phone fa-lg"></i>+91 9513396282</span> {% endcomment %}
+                            {% comment %} <span><i class="id-color fa fa-phone fa-lg"></i>+91 7019232921</span>
+                            <span><i class="id-color fa fa-phone fa-lg"></i>+91 9036704679</span> {% endcomment %}
+                            {% comment %} <span><i class="id-color fa fa-envelope-o fa-lg"></i><a href="mailto:ecoyan.bangalore@gmail.com">ecoyan.bangalore@gmail.com</a></span>
+                            <span><i class="id-color fa fa-envelope-o fa-lg"></i><a href="mailto:info.ecoyan@gmail.com">info.ecoyan@gmail.com</a></span> {% endcomment %}
+                            {% comment %} <span><i class="id-color fa fa-envelope-o fa-lg"></i><a href="mailto:info@ecoyan.in">info@ecoyan.in</a></span> {% endcomment %}
+                            {% comment %} <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="#">Download Brochure</a></span> {% endcomment %}
+                        </address>
+                    </div>
+
+                    <div class="de-box mb30">
+                        <h4>Manufacturing Unit</h4>
+                        <address class="s1">
+                            {% comment %} <h6>Head Office-</h6> {% endcomment %}
+                                <span><i class="id-color fa fa-map-marker fa-lg"></i>No 52, 4th cross, Near Muneshwara Temple, Huskur Gate, Hosur Main Road, Electronic City Phase 2, Bengaluru-560100</span></br>
+                                {% comment %} <h4>Manufacturing Unit</h4>
+                                <span><i class="id-color fa fa-map-marker fa-lg"></i>No 22, 4th cross, Near Muneshwara Temple, Huskur Gate, Hosur Main Road, Electronic City Phase 2, Bengaluru-560100</span> {% endcomment %}
+                            {% comment %} <span><i class="id-color fa fa-phone fa-lg"></i>+91 9513396282</span> {% endcomment %}
+                            {% comment %} <span><i class="id-color fa fa-phone fa-lg"></i>+91 7019232921</span>
+                            <span><i class="id-color fa fa-phone fa-lg"></i>+91 9036704679</span> {% endcomment %}
+                            {% comment %} <span><i class="id-color fa fa-envelope-o fa-lg"></i><a href="mailto:ecoyan.bangalore@gmail.com">ecoyan.bangalore@gmail.com</a></span>
+                            <span><i class="id-color fa fa-envelope-o fa-lg"></i><a href="mailto:info.ecoyan@gmail.com">info.ecoyan@gmail.com</a></span> {% endcomment %}
+                            {% comment %} <span><i class="id-color fa fa-envelope-o fa-lg"></i><a href="mailto:info@ecoyan.in">info@ecoyan.in</a></span> {% endcomment %}
+                            {% comment %} <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="#">Download Brochure</a></span> {% endcomment %}
+                        </address>
+                    </div>
+
+                    <div class="de-box mb30">
+                        <h4>Contact Us</h4>
+                        <address class="s1">
+                            
+                            <span><i class="id-color fa fa-phone fa-lg"></i>+91 9513396282 <b>-</b> <b>Sales and Marketing</b> </span>
+                            <span><i class="id-color fa fa-phone fa-lg"></i>+91 9513396283 <b>-</b> <b>Support and Service</b> </span>
+                            <span><i class="id-color fa fa-envelope-o fa-lg"></i><a href="mailto:info.ecoyan@gmail.com">info.ecoyan@gmail.com</a></span>
+                            <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="{% static 'pdf/Ecoyan-Catalogue.pdf' %}" target="_blank">Download Brochure</a></span>
+                            
+                        </address>
+                    </div>
+
+
+
+                    {% comment %} <div class="de-box mb30">
+                        <h4>AU Office</h4>
+                        <address class="s1">
+                            <span><i class="fa fa-map-marker fa-lg"></i>100 Mainstreet Center, Sydney</span>
+                            <span><i class="fa fa-phone fa-lg"></i>+61 333 9296</span>
+                            <span><i class="fa fa-envelope-o fa-lg"></i><a href="mailto:contact@example.com">contact@example.com</a></span>
+                            <span><i class="fa fa-file-pdf-o fa-lg"></i><a href="#">Download Brochure</a></span>
+                        </address>
+                    </div> {% endcomment %}
+
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.093387034849!2d77.6792862760221!3d12.837241617807706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6cf60a4c9b0b%3A0x25a968a4fe89666d!2sEcoyan%20Electric%20Motor%20Vehicles%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1715932236129!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+    </section>
+
+</div>
+<!-- content close -->
+    
+{% endblock %}

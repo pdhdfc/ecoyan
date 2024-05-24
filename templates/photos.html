@@ -14,7 +14,7 @@
             
             <!-- section begin -->
             <section id="subheader" class="jarallax text-light">
-                <img src="{%  static 'images/background/subheader.jpg' %}" class="jarallax-img" alt="">
+                <img src="{%  static 'images/background/subheader.jpg' %}" class="jarallax-img" alt=""></img>
                     <div class="center-y relative text-center">
                         <div class="container">
                             <div class="row">
@@ -28,185 +28,291 @@
             </section>
             <!-- section close -->
 
-<style>
-    /* Lazy Load Styles */
-    .card-image {
-        display: block;
-        min-height: 20rem; /* layout hack */
-        background: #fff center center no-repeat;
-        background-size: cover;
-        filter: blur(3px); /* blur the lowres image */
-    }
-    
-    .card-image > img {
-        display: block;
-        width: 100%;
-        opacity: 0; /* visually hide the img element */
-    }
-    
-    .card-image.is-loaded {
-        filter: none; /* remove the blur on fullres image */
-        transition: filter 1s;
-    }
-    
-    
-    
-    
-    /* Layout Styles */
-    html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        font-size: 16px;
-        font-family: sans-serif;
-    }
-    
-    .card-list {
-        display: block;
-        margin: 1rem auto;
-        padding: 0;
-        font-size: 0;
-        text-align: center;
-        list-style: none;
-    }
-    
-    .card {
-        display: inline-block;
-        width: 90%;
-        max-width: 20rem;
-        margin: 1rem;
-        font-size: 1rem;
-        text-decoration: none;
-        overflow: hidden;
-        box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
-        transition: transform 0.1s ease-in-out, box-shadow 0.1s;
-    }
-    
-    .card:hover {
-        transform: translateY(-0.5rem) scale(1.0125);
-        box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
-    }
-    
-    .card-description {
-        display: block;
-        padding: 1em 0.5em;
-        color: #515151;
-        text-decoration: none;
-    }
-    
-    .card-description > h2 {
-        margin: 0 0 0.5em;
-    }
-    
-    .card-description > p {
-        margin: 0;
-    }
-    </style>
+        </div>
 
-    <ul class="card-list">
-        
-        <li class="card">
-            <a class="card-image"  target="_blank" style="background-image: url(https://i.ibb.co/8BYdpkm/test-drive-at-Anekal.jpg);" data-image-full="https://i.ibb.co/8BYdpkm/test-drive-at-Anekal.jpg">
-                <img src="https://i.ibb.co/8BYdpkm/test-drive-at-Anekal.jpg" alt="Psychopomp" />
-            </a>
-            <a class="card-description"  target="_blank">
-                <h2>Anekal </h2>
-                <p>Bangalore</p> 
-            </a>
-        </li>
-        
 
-        <li class="card">
-            <a class="card-image"  target="_blank" style="background-image: url(https://i.ibb.co/59WKM6d/Test-drive-at-Bmmasandra-Inudstrial-Area.jpg);" data-image-full="https://i.ibb.co/59WKM6d/Test-drive-at-Bmmasandra-Inudstrial-Area.jpg">
-                <img src="https://i.ibb.co/59WKM6d/Test-drive-at-Bmmasandra-Inudstrial-Area.jpg" alt="Psychopomp" />
-            </a>
-            <a class="card-description"  target="_blank">
-                <h2>Bommasandra</h2>
-                <p>Industrial Area</p> 
-            </a>
-        </li>
-        
 
-        <li class="card">
-            <a class="card-image"  target="_blank" style="background-image: url(https://i.ibb.co/7jBLv6m/Ecity-Habba-2.jpg");" data-image-full="https://i.ibb.co/7jBLv6m/Ecity-Habba-2.jpg"">
-                <img src="https://i.ibb.co/7jBLv6m/Ecity-Habba-2.jpg" alt="Psychopomp" />
-            </a>
-            <a class="card-description"  target="_blank">
-                <h2>Ecity Habba Electronic City </h2>
-                <p>Bangalore
-                </p> 
-            </a>
-        </li>
+        <style>
+  
 
-        <li class="card">
-            <a class="card-image"  target="_blank" style="background-image: url(https://i.ibb.co/7CwCvKD/Test-drive-at-Art-of-Living-Bangalore.jpg);" data-image-full="https://i.ibb.co/7CwCvKD/Test-drive-at-Art-of-Living-Bangalore.jpg">
-                <img src="https://i.ibb.co/7CwCvKD/Test-drive-at-Art-of-Living-Bangalore.jpg" alt="Psychopomp" />
-            </a>
-            <a class="card-description"  target="_blank">
-                <h2>Art of Living</h2>
-                <p>Bangalore</p> 
-            </a>
-        </li>
+            *,
+         ::before,
+         ::after {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+         }
+         img {
+           max-width: 100%;
+           display: block;
+         }
+         
+         .divv {
+           min-height: 50svh;
+           padding: 2rem;
+           background-color: white;
+           color: white;
+           font-family: system-ui;
+         
+           display: grid;
+           place-content: center;
+         }
+         .gallery button {
+           -webkit-appearance: none;
+           border-radius: 0;
+           text-align: inherit;
+           background: none;
+           box-shadow: none;
+           padding: 0;
+           cursor: pointer;
+           color: inherit;
+           font: inherit;
+           outline: none;
+           border: none;
+         }
+         
+         .gallery {
+           --_size: 120px; /* width and heigh of iamges */
+           --_grid-cols: repeat(2, 1fr);
+         
+           --_gap: 5px;
+           --_translate-img: 0 calc(var(--_size) * 3 * -1); /* define where we want to translate the image from*/
+           --_translate-bio: 0 calc(var(--_size) * 3); /* define where we want to translate the text from */
+           --_hover-opacity: 0.2; /* opacity of images when one of them is "active"*/
+           --_img-offset: calc(var(--_size) / 4);
+           --_bio-top: 50%; /* positioning of the bio when active */
+         
+           width: 100%;
+           max-width: fit-content;
+           display: grid;
+           grid-template-columns: var(--_grid-cols);
+         
+           gap: var(--_gap);
+           position: relative;
+           overflow: hidden;
+         }
+         @media (min-width: 600px) {
+           .gallery {
+             --_size: 200px;
+             --_grid-cols: repeat(4, 1fr);
+             --_translate-bio: calc(var(--_size) * 3) 0;
+             --_bio-top: 0;
+           }
+         }
+         
+         .gallery > article {
+           height: var(--_size);
+           aspect-ratio: 1;
+           background-image: var(--bg-img);
+           background-position: center;
+           background-size: 0%;
+           background-repeat: no-repeat;
+         }
+         .gallery > article > button {
+           width: 100%;
+           height: 100%;
+           cursor: pointer;
+         }
+         .gallery img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           transition: opacity 500ms ease-in-out;
+         }
+         
+         .gallery > article > div {
+           position: absolute;
+           top: var(--_bio-top);
+           right: 0;
+           width: calc((var(--_size) + var(--_gap)) * 2);
+           height: calc((var(--_size) + var(--_gap)) * 2);
+           background-color: white;
+           color: #555;
+           padding: 2rem;
+           transition: 500ms ease-in-out;
+           opacity: 0;
+           translate: var(--_translate-bio);
+           z-index: 1;
+         }
+         
+         .gallery > article > div > h2 {
+           font-size: 1.2rem;
+         }
+         .gallery > article > div > p {
+           margin-top: 1rem;
+           font-size: 0.9rem;
+           opacity: 0.8;
+           
+             max-height: 50%; /* this could be better */
+             overflow-y: auto;
+         }
+         .gallery > article > div > button {
+           border: none;
+           position: absolute;
+           top: 1rem;
+           right: 1rem;
+           z-index: 2;
+           cursor: pointer;
+           transition: rotate 300ms;
+         }
+         
+         .gallery > article > div > button:focus-visible,
+         .gallery > article > div > button:hover {
+           rotate: 90deg;
+         }
+         
+         .gallery > article::before {
+           content: "";
+           position: absolute;
+           inset: var(--_img-offset);
+           width: calc((var(--_size) + var(--_gap)) * 1.5);
+           height: calc((var(--_size) + var(--_gap)) * 1.5);
+           aspect-ratio: 1;
+           background-position: center;
+           background-size: cover;
+           background-repeat: no-repeat;
+           z-index: 1;
+           opacity: 0;
+           translate: var(--_translate-img);
+           transition: 500ms ease-in-out;
+           background-image: inherit;
+         }
+         
+         /* set opacity on images */
+         .gallery:has(article > button:focus-within) > article img {
+           opacity: var(--_hover-opacity);
+         }
+         
+         /* slide in photo */
+         .gallery > article:has(>button:focus-within)::before {
+           translate: 0;
+           opacity: 1;
+         }
+         /* slide in bio */
+         .gallery article:has(>button:focus-within) > div {
+           opacity: 1;
+           translate: 0;
+         }
+         
+         /* close buttons */
+         /* 
+         these are not really needed, the important thing is taking the focus aways from the "open" button 
+         I have given them tabindex -1 so that they don't get keyboard focus which means that tabbing on the keyboard will automatically open the next image and bio. 
+         Removing the tabindex -1 will give a pause (and extra keyboard action) between each iamge opening, it depends on how you want this to work.
+         */
+         /*
+         .gallery:has(button[data-close]:focus-within) > article::before {
+           translate: var(--_translate-img);
+         }
+         .gallery:has(button[data-close]:focus-within) > article > div {
+           translate: var(--_translate-bio);
+         }*/
+           </style>
+           <div class="divv">
+         <div class="gallery">
+         
+           <article style="--bg-img:url(https://i.ibb.co/8BYdpkm/test-drive-at-Anekal.jpg)">
+             <button type="button" aria-label="open Vintage Analog Camera">
+               <img src="https://i.ibb.co/8BYdpkm/test-drive-at-Anekal.jpg" alt="Vintage Analog Camera">
+             </button>
+             <div>
+               <h2>Anekal</h2>
+               {% comment %} <p>Photo by Elina Volkova from <a href="https://www.pexels.com/photo/vintage-analog-camera-18332726/" target="_blank">Pexels</a></p> {% endcomment %}
+               <p>Bangalore
 
-        <li class="card">
-            <a class="card-image"  target="_blank" style="background-image: url(https://i.ibb.co/94Z40Zn/Rapid-Action-Force-RAF-Coimbatore.jpg);" data-image-full="https://i.ibb.co/94Z40Zn/Rapid-Action-Force-RAF-Coimbatore.jpg">
-                <img src="https://i.ibb.co/94Z40Zn/Rapid-Action-Force-RAF-Coimbatore.jpg" alt="Psychopomp" />
-            </a>
-            <a class="card-description"  target="_blank">
-                <h2>Subidha Retirement Home</h2>
-                <p>Bangalore</p> 
-            </a>
-        </li>
+               </p>
+               <button type="button" data-close="" aria-label="close Vintage Analog Camera" tabindex="-1">&#10005;</button>
+             </div>
+           </article>
+         
+           <article style="--bg-img:url(https://i.ibb.co/59WKM6d/Test-drive-at-Bmmasandra-Inudstrial-Area.jpg">
+             <button type="button">
+               <img src="https://i.ibb.co/59WKM6d/Test-drive-at-Bmmasandra-Inudstrial-Area.jpg" alt="Image 2">
+             </button>
+             <div>
+               <h2>Bommasandra</h2>
+               {% comment %} <p>Photo by jovan curayag from <a href="https://www.pexels.com/photo/an-old-tricycle-3361178/" target="_blank">Pexels</a></p> {% endcomment %}
+               <p>Industrial Area</p>
+               <button type="button" data-close="" aria-label="close Sidecar" tabindex="-1">&#10005;</button>
+             </div>
+           </article>
+         
+           <article style="--bg-img:url(https://i.ibb.co/7jBLv6m/Ecity-Habba-2.jpg">
+             <button type="button">
+               <img src="https://i.ibb.co/7jBLv6m/Ecity-Habba-2.jpg" alt="Image ">
+             </button>
+             <div>
+               <h2>Ecity Habba Electronic City</h2>
+               {% comment %} <p>Photo by Laker from <a href="https://www.pexels.com/photo/old-shabby-unicycle-hanging-on-brick-wall-6156545/" target="_blank">Pexels</a></p> {% endcomment %}
+               <p>Bangalore</p>
+               <button type="button" data-close="" aria-label="close Unicycle"  tabindex="-1">&#10005;</button>
+             </div>
+           </article>
+         
+           <article style="--bg-img:url(https://i.ibb.co/7CwCvKD/Test-drive-at-Art-of-Living-Bangalore.jpg)">
+             <button type="button">
+               <img src="https://i.ibb.co/7CwCvKD/Test-drive-at-Art-of-Living-Bangalore.jpg" alt="Image ">
+             </button>
+             <div>
+               <h2>Art of Living</h2>
+               {% comment %} <p>Photo by Nandi Gustian from <a href="https://www.pexels.com/photo/old-fashioned-red-car-left-in-woods-6691970/" target="_blank">Pexels</a></p> {% endcomment %}
+               <p>Bangalore</p>
+               <button type="button" data-close="" aria-label="close red car" tabindex="-1">&#10005;</button>
+             </div>
+           </article>
+           </article>
+         
+           <article style="--bg-img:url(https://i.ibb.co/94Z40Zn/Rapid-Action-Force-RAF-Coimbatore.jpg">
+             <button type="button" aria-label="Open Rocking Chair">
+               <img src="https://i.ibb.co/94Z40Zn/Rapid-Action-Force-RAF-Coimbatore.jpg" alt="Image ">
+             </button>
+             <div>
+               <h2>Subidha Retirement Home</h2>
+               {% comment %} <p>Photo by Erik Mclean from <a href="https://www.pexels.com/photo/rocking-chair-on-shabby-wooden-porch-7561182/" target="_blank">Pexels</a></p> {% endcomment %}
+               <p>Bangalore
 
-        <li class="card">
-            <a class="card-image"  target="_blank" style="background-image: url(https://i.ibb.co/Pw6Twy5/Test-drive-at-Narayana-Health-City-1.jpg);" data-image-full="https://i.ibb.co/Pw6Twy5/Test-drive-at-Narayana-Health-City-1.jpg">
-                <img src="https://i.ibb.co/Pw6Twy5/Test-drive-at-Narayana-Health-City-1.jpg" alt="Psychopomp" />
-            </a>
-            <a class="card-description"  target="_blank">
-                <h2>Narayana Health City</h2>
-                <p>Bangalore</p> 
-            </a>
-        </li>
-        
-    </ul>
-</div>
-</br></br></br></br>
-      
-      <script>
-      // This is "probably" IE9 compatible but will need some fallbacks for IE8
-    // - (event listeners, forEach loop)
-    
-    // wait for the entire page to finish loading
-    window.addEventListener('load', function() {
-        
-        // setTimeout to simulate the delay from a real page load
-        setTimeout(lazyLoad, 1000);
-        
-    });
-    
-    function lazyLoad() {
-        var card_images = document.querySelectorAll('.card-image');
-        
-        // loop over each card image
-        card_images.forEach(function(card_image) {
-            var image_url = card_image.getAttribute('data-image-full');
-            var content_image = card_image.querySelector('img');
-            
-            // change the src of the content image to load the new high res photo
-            content_image.src = image_url;
-            
-            // listen for load event when the new photo is finished loading
-            content_image.addEventListener('load', function() {
-                // swap out the visible background image with the new fully downloaded photo
-                card_image.style.backgroundImage = 'url(' + image_url + ')';
-                // add a class to remove the blur filter to smoothly transition the image change
-                card_image.className = card_image.className + ' is-loaded';
-            });
-            
-        });
-        
-    }
-    
-    
-      </script>
+               </p>
+               <button type="button" data-close="" aria-label="close Rocking Chair" tabindex="-1">&#10005;</button>
+             </div>
+           </article>
+           </article>
+         
+           <article style="--bg-img:url(https://i.ibb.co/Pw6Twy5/Test-drive-at-Narayana-Health-City-1.jpg">
+             <button type="button" aria-label="open Bouy">
+               <img src="https://i.ibb.co/Pw6Twy5/Test-drive-at-Narayana-Health-City-1.jpg" alt="Image ">
+             </button>
+             <div>
+               <h2>Narayana Health City</h2>
+               {% comment %} <p>Photo by Julia Khalimova from <a href="https://www.pexels.com/photo/shabby-lifesaver-on-green-wall-4765889/" target="_blank">Pexels</a></p> {% endcomment %}
+               <p>Bangalore</p>
+               <button type="button" data-close="" aria-label="close Bouy" tabindex="-1">&#10005;</button>
+             </div>
+           </article>
+           </article>
+         
+           {% comment %} <article style="--bg-img:url(https://images.pexels.com/photos/3868136/pexels-photo-3868136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
+             <button type="button" aria-label="open Rusty Tap">
+               <img src="https://images.pexels.com/photos/3868136/pexels-photo-3868136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image ">
+             </button>
+             <div>
+               <h2>Shabby vintage faucet in old bathroom</h2>
+               <p>Photo by Noah from <a href="https://www.pexels.com/photo/shabby-vintage-faucet-in-old-bathroom-3868136/" target="_blank">Pexels</a></p>
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et obcaecati ut, veritatis ducimus nobis, nisi odit modi dolorem?</p>
+               <button type="button" data-close="" aria-label="close Rusty Tap" tabindex="-1">&#10005;</button>
+             </div>
+           </article> {% endcomment %}
+         
+           {% comment %} <article style="--bg-img:url(https://images.pexels.com/photos/4575426/pexels-photo-4575426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
+             <button type="button" aria-label="open Phone">
+               <img src="https://images.pexels.com/photos/4575426/pexels-photo-4575426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image ">
+             </button>
+             <div>
+               <h2>Old metal public payphone hanging on shabby wall</h2>
+               <p>Photo by Darya Sannikova from <a href="https://www.pexels.com/photo/old-metal-public-payphone-hanging-on-shabby-wall-4575426/" target="_blank">Pexels</a>
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et obcaecati ut, veritatis ducimus nobis, nisi odit modi dolorem?</p>
+               <button type="button" data-close="" aria-label="close Phone" tabindex="-1">&#10005;</button>
+             </div>
+           </article> {% endcomment %}
+         </div>
+        </div>
 {% endblock %}

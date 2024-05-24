@@ -68,6 +68,20 @@ def contact(request):
             return JsonResponse({'success': False})
     return render(request, 'contact.html') 
 
+def dealer(request):
+    if request.method == 'POST':
+        name = request.POST.get('Name')
+        email = request.POST.get('Email')
+        phone = request.POST.get('phone')
+        message = request.POST.get('message')
+        try:
+            ContactMessage.objects.create(name=name, email=email, phone=phone, message=message)
+            return redirect('success')  # Redirect to success page
+        except:
+            return JsonResponse({'success': False})
+    return render(request, 'dealer.html') 
+
+
 def success_view(request):
     return render(request, 'success.html')
 

@@ -28,6 +28,7 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('contact', views.contact, name='contact'),
     path('dealer', views.dealer, name='dealer'),
+    path('book_test_ride', views.book_test_ride, name='book_test_ride'),
     path('success', views.success_view, name='success'),
     path('why_ecoyan', views.why_ecoyan, name='why_ecoyan'),
     path('certification', views.certification, name='certification'),

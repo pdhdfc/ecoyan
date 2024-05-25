@@ -81,6 +81,42 @@ def dealer(request):
             return JsonResponse({'success': False})
     return render(request, 'dealer.html') 
 
+from django.shortcuts import render, redirect
+from django.http import JsonResponse
+from .models import BookTestRode
+
+from django.shortcuts import render, redirect
+from django.http import JsonResponse
+from .models import BookTestRode
+
+def book_test_ride(request):
+    if request.method == 'POST':
+        name = request.POST.get('Name')
+        email = request.POST.get('Email')
+        phone = request.POST.get('Phone')
+        state = request.POST.get('State')
+        city = request.POST.get('City')
+        purpose = request.POST.get('Purpose')
+        message = request.POST.get('Message')
+
+        try:
+            BookTestRode.objects.create(
+                name=name,
+                email=email,
+                phone=phone,
+                state=state,
+                city=city,
+                purpose=purpose,  # Make sure to include purpose here
+                message=message
+            )
+            return redirect('success')  # Redirect to success page
+        except Exception as e:
+            return JsonResponse({'success': False, 'error': str(e)})
+
+    return render(request, 'book_test_ride.html')
+
+
+
 
 def success_view(request):
     return render(request, 'success.html')

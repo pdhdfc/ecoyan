@@ -12,7 +12,7 @@
         
         {% endblock %}
     </title>
-    <link rel="icon" href="https://i.ibb.co/6ZZjN5q/Add-a-heading-1.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="https://i.ibb.co/846hykV/Untitled-1.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     {% comment %} <meta content="ecoyan - Your Trusted Partner for Electric Motor Vehicles in India" name="description"> {% endcomment %}
@@ -155,7 +155,7 @@
                                             <li><a class="menu-item" href="golf_cart">GOLF CART</a></li>
                                             {% comment %} <li><a class="menu-item" href="car">CAR</a></li> {% endcomment %}
                                             <li><a class="menu-item" href="{% static 'pdf/Components.pdf' %}" target="_blank">COMPONENTS</a></li>
-                                            <li><a class="menu-item" href="{% static 'pdf/Ecoyan-Catalogue.pdf' %}" target="_blank">E-CATALOGUE</a></li>
+                                            <li><a class="menu-item" href="{% static 'pdf/Ecoyan_Catalogue.pdf' %}" target="_blank">E-CATALOGUE</a></li>
                                             {% comment %} <li><a class="menu-item" href="contact">TEST DRIVE REQUEST</a></li> {% endcomment %}
                                             
                                         </ul>
@@ -170,7 +170,7 @@
                                     <li><a class="menu-item" href="dealer">Dealer</a>
                                         
                                     </li>
-                                    <li><a class="menu-item" href="contact">Test Drive Request</a>
+                                    <li><a class="menu-item" href="book_test_ride">Test Drive Request</a>
                                         
                                     </li>
                                         
@@ -339,18 +339,23 @@
 
 
     <style>
-        .whastsappk{
-           position: fixed;
-           bottom: -38px;
-           left: -22px;
-        
+        .whatsappk {
+            position: fixed;
+            bottom: 10px;
+            right: 5px;
+        }
+        .whatsapp-icon {
+            width: 50px; /* Adjust the width as needed */
+            height: auto; /* Maintain the aspect ratio */
         }
     </style>
-    <div class="whastsappk">
+    
+    <div class="whatsappk">
         <a href="https://wa.me/919513396282?text=Hi, could you provide assistance regarding the Services?" target="_blank">
-           <img src="{% static 'images/chat.png' %}" width="120" alt="" ></img>
+            <img class="whatsapp-icon" src="{% static 'images/chat.png' %}" alt="WhatsApp Chat">
         </a>
     </div>
+    
      
     {% comment %} <style>
         .callpk{

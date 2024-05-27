@@ -11,21 +11,38 @@ Ecoyan: Leading India's Electric Vehicle Revolution with Innovative Manufacturin
         <div class="no-bottom no-top" id="content">
             <div id="top"></div>
                       <style>
-                        #section-hero {
-                          background-image: url('path/to/your/image.jpg');
-                          background-position: bottom;
-                          background-size: cover;
-                      }
-                      
-                      @media (max-width: 768px) {
+          
+                      #section-hero {
+                        background-image: url('{% static 'images/background/7.jpg' %}'); /* Replace 'your-image-url.jpg' with the path to your image */
+                        background-size: 100% auto;;
+                        background-position: center;
+                    }
+
+                                          * Media query for tablets and smaller devices */
+                      @media (max-width: 992px) {
                           #section-hero {
-                              background-image: none;
+                              background-size: cover;
+                              background-position: center;
                           }
                       }
-                      
+
+                      /* Media query for smartphones and smaller devices */
+                      @media (max-width: 768px) {
+                          #section-hero {
+                              background-size: cover;
+                              background-position: center;
+                          }
+                      }
+                      @media (max-width: 768px) {
+                        #section-hero {
+                            background-size: 100% auto; /* Fixed width, auto height */
+                            background-position: center bottom; /* Adjust background position as needed */
+                        }
+                    }
+                    
                       </style>
                     {% comment %} <section id="section-hero" aria-label="section" class="full-height vertical-center" > {% endcomment %}
-                      <section id="section-hero" aria-label="section" class="full-height vertical-center" data-bgimage="url({% static 'images/background/7.jpg' %}) bottom">
+                      <section id="section-hero" aria-label="section" class="full-height vertical-center">
                         <div class="container">
                             <div class="row align-items-center">
                                 <div class="spacer-double sm-hide"></div>
@@ -34,27 +51,23 @@ Ecoyan: Leading India's Electric Vehicle Revolution with Innovative Manufacturin
                                     <div class="spacer-10"></div>
                                     <h1>Ecoyan: Powering India&#39;s Green Commute Electrically, Efficiently and Effortlessly for You. </h1>
                                     <div class="hi">
-                                      <p class="lead">“E-rickshaw / E-cart/ E-Vehicles – Approved by Automotive Research Association of India (ARAI)”</p>
+                                        <p class="lead">“E-rickshaw / E-cart/ E-Vehicles – Approved by Automotive Research Association of India (ARAI)”</p>
                                     </div>
-        
                                     <style>
-                                      @media (max-width: 768px) {
-                                          .hi {
-                                              display: none;
-                                          }
-                                      }
-                                  </style>
-                                  <div class="hi">
-                                  <a class="btn-main" href="photos">Explore</a>&nbsp;&nbsp;&nbsp;<a class="btn-main btn-black" href="contact">Connect With Us</a>
-                                  </div>
-                                  
+                                        @media (max-width: 768px) {
+                                            .hi {
+                                                display: none;
+                                            }
+                                        }
+                                    </style>
+                                    <div class="hi">
+                                        <a class="btn-main" href="photos">Explore</a>&nbsp;&nbsp;&nbsp;<a class="btn-main btn-black" href="contact">Connect With Us</a>
+                                    </div>
                                 </div>
-        
-                                
-                                
                             </div>
                         </div>
                     </section>
+                    
                 
                 
                 {% comment %} <section id="section-hero2" aria-label="section" class="full-height vertical-center section-hero2" style="background-image: url({% static 'images/background/auto1.png' %});">
@@ -548,116 +561,71 @@ Ecoyan: Leading India's Electric Vehicle Revolution with Innovative Manufacturin
                             </style>
 
 
-                        <div class="row">
-
-                          <style>
-                            .product img {
-                              padding: -45px;
-                              background: #ffffff;
-                              /* border: solid 1px #fff; */
-                          }
-                          
-                          
-                          </style>
-                          <div class="col-lg-3">
-                            <!-- Product 4 -->
-                            <a href="e_rickshaw">
-                            <div class="product">
-                              
-                                <div class="parent">
-
+                            <div class="row">
+                              <div class="col-lg-3 col-md-3 col-sm-6">
+                                <a href="e_rickshaw" class="product-link">
+                                  <div class="product">
                                     <div class="card">
-                                      
-                                        <img src="https://i.ibb.co/qdHzYgY/e-rickshaw.png" alt="Description of the image" class="img-fluid">
-                                      </br>
-                      
-                                      
+                                      <img src="https://i.ibb.co/qdHzYgY/e-rickshaw.png" alt="E-Rickshaw" class="img-fluid">
                                       <div class="center">
-                                        <h3>E- Rickshaw</h3>
+                                        <h3>E-Rickshaw</h3>
                                       </div>
-
                                     </div>
-                                    
-                                </div>
-                            </div>
-                          </a>
-                        </div>
-
-                        <div class="col-lg-3">
-                          <!-- Product 4 -->
-                          <a href="e_cargo">
-                          <div class="product">
+                                  </div>
+                                </a>
+                              </div>
                             
-                              <div class="parent">
-
-                                  <div class="card">
-                                    
-                                      <img src="https://i.ibb.co/jWtf4fd/e-cargo.png" alt="Description of the image" class="img-fluid">
-                                  </br>
-                                      <style>
-                                        .center {
-                                          text-align: center;
-                                        }
-                                      </style>
-                                      
+                              <div class="col-lg-3 col-md-3 col-sm-6">
+                                <a href="e_cargo" class="product-link">
+                                  <div class="product">
+                                    <div class="card">
+                                      <img src="https://i.ibb.co/jWtf4fd/e-cargo.png" alt="E-Cargo" class="img-fluid">
                                       <div class="center">
                                         <h3>E-Cargo</h3>
                                       </div>
-                                      
-                                  </div>
-                                  
-                              </div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="col-lg-3">
-                        <!-- Product 4 -->
-                        <a href="e_garbage">
-                        <div class="product">
-                          
-                            <div class="parent">
-
-                                <div class="card">
-                                  
-                                    <img src="https://i.ibb.co/1R6ws5s/E-Garbage.png" alt="Description of the image" class="img-fluid">
-                                  </br>
-                      
-                                      
-                                  <div class="center">
-                                    <h3>E- Garbage</h3>
-                                  </div>
-                                    
-                                </div>
-                                
-                            </div>
-                        </div>
-                      </a>
-                    </div>
-
-                            <div class="col-lg-3">
-                              <a href="golf_cart">
-                                <!-- Product 4 -->
-                                <div class="product">
-                                  
-                                    <div class="parent">
-
-                                        <div class="card">
-                                          
-                                            <img src="https://i.ibb.co/Kb0KrZd/Golf-Cart.png" alt="Description of the image" class="img-fluid">
-                                        
-                                           
-                                          </br>
-                      
-                                      
-                                          <div class="center">
-                                            <h3>Golf-Cart</h3>
-                                          </div>
-                                        </div>
-                                        
                                     </div>
-                                </div>
-                              </a>
+                                  </div>
+                                </a>
+                              </div>
+                            
+                              <div class="col-lg-3 col-md-3 col-sm-6">
+                                <a href="e_garbage" class="product-link">
+                                  <div class="product">
+                                    <div class="card">
+                                      <img src="https://i.ibb.co/1R6ws5s/E-Garbage.png" alt="E-Garbage" class="img-fluid">
+                                      <div class="center">
+                                        <h3>E-Garbage</h3>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            
+                              <div class="col-lg-3 col-md-3 col-sm-6">
+                                <a href="golf_cart" class="product-link">
+                                  <div class="product">
+                                    <div class="card">
+                                      <img src="https://i.ibb.co/Kb0KrZd/Golf-Cart.png" alt="Golf-Cart" class="img-fluid">
+                                      <div class="center">
+                                        <h3>Golf-Cart</h3>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
                             </div>
+                            
+                            <style>
+                              .product img {
+                                padding: -45px; /* This padding doesn't seem necessary, consider removing it */
+                                background: #ffffff;
+                              }
+                            
+                              .center {
+                                text-align: center;
+                              }
+                            </style>
+                            
 
                             
                         </div>
@@ -672,74 +640,92 @@ Ecoyan: Leading India's Electric Vehicle Revolution with Innovative Manufacturin
               <div class="container">
                 <div class="row">
                   <!-- Video Section -->
-                  
-                  <style>
-                    .image-container {
-                        display: flex;
-                        justify-content: center;
-                        margin: 20px;
-                    }
-                    @media only screen and (max-width: 768px) {
-                        .image-container {
-                            display: none;
-                        }
-                    }
-                </style>
-                  
-                <div class="col-lg-6">
-                    <div class="image-container">
-                        <div id="player"></div>
+                  <div class="col-lg-6">
+                    <div class="video-container">
+                      <div id="player"></div>
                     </div>
-                </div>
-                
-            
+                  </div>
                   <!-- Content Section -->
                   <div class="col-lg-6">
-                    
-                    <h2 style="margin-top: -79px;">Excellence at Every Turn: Our Dedication to Quality</h2>
-                    <div class="spacer-20"></div>
-                    <div class="tab-content" id="pills-tabContent">
-                      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                        <p>At Ecoyan, our commitment to excellence extends far beyond just manufacturing environmentally conscious transportation!</p>
-                        <p>We pride ourselves on crafting e-vehicles that not only meet stringent quality standards but also prioritize the comfort and satisfaction of our customers. In an era of collective eco-consciousness, we stand at the forefront, pioneering a new wave of sustainable transportation. Each vehicle is meticulously designed to provide not just transportation, but a seamless and enjoyable experience. We ensure every journey is a testament to our dedication to both quality and an environmental revolution. Join us as we redefine the future of mobility, one eco-friendly ride at a time.</p>
+                    <div class="content-container">
+                      <h2>Excellence at Every Turn: Our Dedication to Quality</h2>
+                      <div class="spacer-20"></div>
+                      <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                          <p>At Ecoyan, our commitment to excellence extends far beyond just manufacturing environmentally conscious transportation!</p>
+                          <p>We pride ourselves on crafting e-vehicles that not only meet stringent quality standards but also prioritize the comfort and satisfaction of our customers. In an era of collective eco-consciousness, we stand at the forefront, pioneering a new wave of sustainable transportation. Each vehicle is meticulously designed to provide not just transportation, but a seamless and enjoyable experience. We ensure every journey is a testament to our dedication to both quality and an environmental revolution. Join us as we redefine the future of mobility, one eco-friendly ride at a time.</p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            
-              <script>
-                // Load the YouTube IFrame Player API code asynchronously
-                var tag = document.createElement('script');
-                tag.src = 'https://www.youtube.com/iframe_api';
-                var firstScriptTag = document.getElementsByTagName('script')[0];
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-            
-                var player;
-                function onYouTubeIframeAPIReady() {
-                  player = new YT.Player('player', {
-                    height: '315',
-                    width: '560',
-                    
-                    videoId: '3GZ6L4FvwXY', // Replace this with your video ID
-                    playerVars: {
-                      'autoplay': 1,
-                      'controls': 0,
-                      'showinfo': 0,
-                      'rel': 0,
-                      'loop': 1
-                    },
-                    events: {
-                      'onReady': onPlayerReady
-                    }
-                  });
-                }
-            
-                function onPlayerReady(event) {
-                  event.target.mute(); // Mute the player (optional)
-                }
-              </script>
             </section>
+            
+            <style>
+              .video-container {
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 aspect ratio */
+                height: 0;
+                overflow: hidden;
+                margin-bottom: 20px;
+              }
+            
+              .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              }
+            
+              .content-container {
+                padding: 0 20px;
+              }
+            
+              @media only screen and (max-width: 768px) {
+                .video-container,
+                .col-lg-6 {
+                  width: 100%;
+                }
+            
+                .content-container {
+                  padding: 0;
+                }
+              }
+            </style>
+            
+            <script>
+              // Load the YouTube IFrame Player API code asynchronously
+              var tag = document.createElement('script');
+              tag.src = 'https://www.youtube.com/iframe_api';
+              var firstScriptTag = document.getElementsByTagName('script')[0];
+              firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            
+              var player;
+              function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                  height: '315',
+                  width: '100%', // Set width to 100% for responsiveness
+                  videoId: '3GZ6L4FvwXY', // Replace this with your video ID
+                  playerVars: {
+                    'autoplay': 1,
+                    'controls': 0,
+                    'showinfo': 0,
+                    'rel': 0,
+                    'loop': 1
+                  },
+                  events: {
+                    'onReady': onPlayerReady
+                  }
+                });
+              }
+            
+              function onPlayerReady(event) {
+                event.target.mute(); // Mute the player (optional)
+              }
+            </script>
+            
             
 
             <section>

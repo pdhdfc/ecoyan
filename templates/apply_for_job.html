@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+{% load form_tags %}
+
+{% block title %}
+Apply for {{ job.title }}
+{% endblock %}
+
+{% block content %}
+        
+
+
+   
+        
+      <!-- header close -->
+        <!-- content begin -->
+        <div class="no-bottom no-top zebra" id="content">
+            <div id="top"></div>
+            
+            <!-- section begin -->
+            <section id="subheader" class="jarallax text-light">
+                <img src="{%  static 'images/background/subheader.jpg' %}" class="jarallax-img" alt="">
+                    <div class="center-y relative text-center">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+									<h1>Careers</h1>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <!-- section close -->
+           
+            <style>
+                .section_all {
+                    padding: 50px 0;
+                }
+                .form-group label {
+                    font-weight: bold;
+                }
+                .btn-primary {
+                    background-color: #007bff;
+                    border-color: #007bff;
+                    transition: background-color 0.3s, border-color 0.3s;
+                }
+                .btn-primary:hover {
+                    background-color: #0056b3;
+                    border-color: #0056b3;
+                }
+                {% comment %} .container {
+                    max-width: 600px;
+                    background: white;
+                    padding: 30px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                } {% endcomment %}
+                .section-title {
+                    font-size: 2rem;
+                    margin-bottom: 20px;
+                }
+            </style>
+            <section class="section_all" id="about">
+                <div class="container">
+                    <h1 class="section-title text-center">Apply for {{ job.title }} Position</h1>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {{ form.name.label_tag }}
+                            {{ form.name|add_class:"form-control" }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.email.label_tag }}
+                            {{ form.email|add_class:"form-control" }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.resume.label_tag }}
+                            {{ form.resume|add_class:"form-control" }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.cover_letter.label_tag }}
+                            {{ form.cover_letter|add_class:"form-control" }}
+                        </div>
+                        <br><br>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        </div>
+    
+{% endblock %}

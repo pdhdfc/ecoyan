@@ -5,3 +5,12 @@ class ContactForm(forms.Form):
     email = forms.EmailField(label='Your Email')
     phone = forms.CharField(label='Your Phone', max_length=20)
     message = forms.CharField(label='Your Message', widget=forms.Textarea)
+
+
+
+from .models import Application
+
+class ApplicationForm(forms.ModelForm):
+    class Meta:
+        model = Application
+        fields = ['name', 'email', 'resume', 'cover_letter']

@@ -100,9 +100,9 @@
                 <div class="container">
                     <div class="topbar-left xs-hide">
                         <div class="topbar-widget">
-                            <div class="topbar-widget"><a href="#"><i class="fa fa-phone"></i>+91 9513396282</a></div>
-                            <div class="topbar-widget"><a href="#"><i class="fa fa-envelope"></i>info@ecoyan.in</a></div>
-                            <div class="topbar-widget"><a href="#"><i class="fa fa-clock-o"></i>Mon - Sat 10.00 - 7.00</a></div>
+                            <div class="topbar-widget"><a ><i class="fa fa-phone"></i>+91 9513396282</a></div>
+                            <div class="topbar-widget"><a ><i class="fa fa-envelope"></i>info@ecoyan.in</a></div>
+                            <div class="topbar-widget"><a ><i class="fa fa-clock-o"></i>Mon - Sat 10.00 - 7.00</a></div>
                             
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                     <div class="topbar-right">
                         <div class="social-icons">
                             <a href="https://www.facebook.com/people/Ecoyan-Bangalore/100012616779083"><i class="fa fa-facebook fa-lg"></i></a>
-                            <a href="https://www.linkedin.com/in/ecoyan-bangalore-719b89123/?original_referer=https%3A%2F%2Fwww.ecoyan.in%2F"><i class="fa fa-linkedin fa-lg"></i></a>
+                            <a href="https://www.linkedin.com/company/ecoyan/mycompany/"><i class="fa fa-linkedin fa-lg"></i></a>
                             <a href="https://www.youtube.com/@ecoyanbangalore1776/videos"><i class="fa fa-youtube fa-lg"></i></a>
                             {% comment %} <a href="#"><i class="fa fa-pinterest fa-lg"></i></a> {% endcomment %}
                             <a href="https://www.instagram.com/ecoyan_ev_pvt_ltd/"><i class="fa fa-instagram fa-lg"></i></a>
@@ -147,7 +147,7 @@
                                     <li><a class="menu-item" href="/">Home</a>
                                         
                                     </li>
-                                    <li><a class="menu-item" href="#">Products</a>
+                                    <li><a class="menu-item">Products</a>
                                         <ul>
                                             <li><a class="menu-item" href="e_rickshaw">E-RICKSHAW</a></li>
                                             <li><a class="menu-item" href="e_cargo">E-CARGO</a></li>
@@ -160,7 +160,7 @@
                                             
                                         </ul>
                                     </li>
-                                    <li><a class="menu-item" href="#">Gallery</a>
+                                    <li><a class="menu-item" >Gallery</a>
                                         <ul>
                                             {% comment %} <li><a class="menu-item new" href="">PHOTOS</a></li> {% endcomment %}
                                             <li><a class="menu-item " href="photos">PHOTOS</a></li>
@@ -186,7 +186,7 @@
                                             <li><a class="menu-item" href="why_ecoyan">WHY ECOYAN</a>
                                                 
                                             </li> {% endcomment %}
-                                            <li><a class="menu-item" href="#">CERTIFICATION</a>
+                                            <li><a class="menu-item">CERTIFICATION</a>
                                                 <ul>
                                                     <li><a class="menu-item" href="{% static 'pdf/ARAI_Certificate_Ecoyan_EA.pdf' %}" target="_blank">ARAI Certificate EA</a></li>
                                                     <li><a class="menu-item" href="{% static 'pdf/ARAI_Certificate_Ecoyan_EL.pdf' %}" target="_blank">ARAI Certificate EL</a></li>
@@ -277,8 +277,8 @@
                                 <div class="widget">
                                     <ul>
                                         <li><a href="about">About</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Careers</a></li>
+                                        <li><a href="blogs">Blog</a></li>
+                                        <li><a href="job_list">Careers</a></li>
                                         <li><a href="#">News</a></li>
                                         <li><a href="#">Partners</a></li>
                                     </ul>
@@ -292,7 +292,7 @@
                             <h5>Social Network</h5>
                             <div class="social-icons">
                                 <a href="https://www.facebook.com/people/Ecoyan-Bangalore/100012616779083"><i class="fa fa-facebook fa-lg"></i></a>
-                                <a href="https://www.linkedin.com/in/ecoyan-bangalore-719b89123/?original_referer=https%3A%2F%2Fwww.ecoyan.in%2F"><i class="fa fa-linkedin fa-lg"></i></a>
+                                <a href="https://www.linkedin.com/company/ecoyan/mycompany/"><i class="fa fa-linkedin fa-lg"></i></a>
                                 <a href="https://www.youtube.com/@ecoyanbangalore1776/videos"><i class="fa fa-youtube fa-lg"></i></a>
                                 {% comment %} <a href="#"><i class="fa fa-pinterest fa-lg"></i></a> {% endcomment %}
                                 <a href="https://www.instagram.com/ecoyan_ev_pvt_ltd/"><i class="fa fa-instagram fa-lg"></i></a>
@@ -307,13 +307,15 @@
                         <div class="col-md-12">
                             <div class="de-flex">
                                 <div class="de-flex-col">
-                                    <a href="index.html">
-                                        Copyright © Ecoyan 2024
+                                    <a href="/">
+                                        Copyright © Ecoyan 2024-V3
                                     </a>
                                 </div>
                                 <ul class="menu-simple">
                                     <li><a href="#">Terms &amp; Conditions</a></li>
                                     <li><a href="#">Privacy Policy</a></li>
+                                    {% comment %} <li><a href="TermsConditions">Terms &amp; Conditions</a></li>
+                                    <li><a href="PrivacyPolicy">Privacy Policy</a></li> {% endcomment %}
                                 </ul>
                             </div>
                         </div>
@@ -397,6 +399,16 @@
         // 'Last refund date': null, // Send null when no value exists for a user.
     });
     </script>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV4HRST7R3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SV4HRST7R3');
+</script>
 
 </body>
 

@@ -101,3 +101,55 @@ class BookTestRode(models.Model):
     def __str__(self):
         return self.name
 
+
+
+from django.utils.text import slugify
+from ckeditor.fields import RichTextField
+from django.urls import reverse
+
+class BlogPost(models.Model):
+    image = models.ImageField(upload_to='blog/image', blank=True, null=True)
+    title = models.CharField(max_length=200)
+    content_sort = models.CharField(max_length=200)
+    content = RichTextField()
+    date = models.DateTimeField()
+    author = models.CharField(max_length=100)
+    click_count = models.IntegerField(default=0)
+    slug = models.SlugField(unique=True, max_length=200, null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        # Generate slug automatically if not provided
+        if not self.slug:
+            self.slug = slugify(self.title.replace(" ", "-"))  # Replace spaces with hyphens
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('blogpost_detail', args=[self.id])
+    
+
+
+
+from django.db import models
+
+class Job(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    is_open = models.BooleanField(default=True)  # Add this line
+
+    def __str__(self):
+        return self.title
+
+class Application(models.Model):
+    job = models.ForeignKey(Job, on_delete=models.CASCADE, related_name='applications')
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    resume = models.FileField(upload_to='resumes/')
+    cover_letter = models.TextField(blank=True, null=True)
+    applied_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.name} - {self.job.title}'

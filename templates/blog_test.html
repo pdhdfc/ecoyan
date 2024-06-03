@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Blog {% endblock %}
+
+{% block content %}
+<section id="subheader" class="jarallax text-light">
+    <img src="{%  static 'images/background/subheader.jpg' %}" class="jarallax-img" alt="">
+        <div class="center-y relative text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1>Blogs</h1>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- content begin -->
+
+<div class="container-fluid bg-light py-5" id="content">
+    <div class="container">
+        
+        <section class="popular-posts py-5 border-bottom">
+            <h2 class="text-center text-uppercase mb-4">Popular Posts</h2>
+            <div class="row">
+                {% for post in trending_posts_page %}
+                <div class="col-md-4 mb-4">
+                    <a href="{% url 'blog_details' slug=post.slug %}" class="card h-100 shadow-sm text-decoration-none">
+                        <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.title }}">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">{{ post.title }}</h5>
+                            <p class="card-text">{{ post.content_sort }}</p>
+                            <small class="text-muted">By {{ post.author }} on {{ post.date }}</small>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <!-- New Posts Section -->
+        <section class="new-posts py-5">
+            <h2 class="text-center text-uppercase mb-4">New Posts</h2>
+            <div class="row">
+                {% for post in new_posts_page %}
+                <div class="col-md-4 mb-4">
+                    <a href="{% url 'blog_details' slug=post.slug %}" class="card h-100 shadow-sm text-decoration-none">
+                        <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.title }}">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">{{ post.title }}</h5>
+                            <p class="card-text">{{ post.content_sort }}</p>
+                            <small class="text-muted">By {{ post.author }} on {{ post.date }}</small>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- Pagination -->
+            <nav aria-label="Page navigation" class="d-flex justify-content-center">
+                <ul class="pagination">
+                    {% if new_posts_page.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?new_page=1">First</a></li>
+                    <li class="page-item"><a class="page-link" href="?new_page={{ new_posts_page.previous_page_number }}">Previous</a></li>
+                    {% endif %}
+                    {% for num in new_posts_page.paginator.page_range %}
+                    <li class="page-item {% if new_posts_page.number == num %}active{% endif %}">
+                        <a class="page-link" href="?new_page={{ num }}">{{ num }}</a>
+                    </li>
+                    {% endfor %}
+                    {% if new_posts_page.has_next %}
+                    <li class="page-item"><a class="page-link" href="?new_page={{ new_posts_page.next_page_number }}">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="?new_page={{ new_posts_page.paginator.num_pages }}">Last</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </section>
+    </div>
+</div>
+
+<!-- Custom CSS for additional styling -->
+<style>
+    .card {
+        transition: transform 0.2s;
+    }
+    .card:hover {
+        transform: scale(1.05);
+    }
+    .card-body {
+        text-align: left;
+    }
+    .card-title {
+        font-size: 1.1rem;
+    }
+    .card-text {
+        font-size: 0.9rem;
+    }
+    .text-primary {
+        color: #0d6efd;
+    }
+    @media (max-width: 767px) {
+        .card-body {
+            text-align: center;
+        }
+    }
+</style>
+{% endblock %}

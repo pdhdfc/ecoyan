@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-#q=g*wol!g(%+7iwca%c+fe)yque7e_mmlb=mjg7tplv%0qgmf
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+# DEBUG = True
 ALLOWED_HOSTS = ["*"]
 CSRF_TRUSTED_ORIGINS = ['https://*.ecoyan.in','https://*.34.229.128.223']
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -133,10 +134,12 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_URL = '/static/'
-
+MEDIA_URL='/images/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+MEDIA_ROOT=os.path.join(BASE_DIR, 'static/images')
+STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Default primary key field type

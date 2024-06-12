@@ -1,5 +1,11 @@
-from django.shortcuts import render
 from django.utils.translation import gettext_lazy as _
+from .forms import *
+from .models import *
+from django.http import JsonResponse
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.utils import timezone
+from datetime import timedelta
+from django.shortcuts import render, get_object_or_404, redirect
 
 
 # Create your views here.
@@ -42,18 +48,7 @@ def car(request):
 
 
 
-from django.shortcuts import render
-from django.http import HttpResponseRedirect
-from django.urls import reverse
-from .forms import ContactForm
 
-# views.py
-
-from django.shortcuts import render
-from django.http import JsonResponse
-from .models import ContactMessage
-
-from django.shortcuts import redirect
 
 def contact(request):
     if request.method == 'POST':
@@ -81,13 +76,7 @@ def dealer(request):
             return JsonResponse({'success': False})
     return render(request, 'dealer.html') 
 
-from django.shortcuts import render, redirect
-from django.http import JsonResponse
-from .models import BookTestRode
 
-from django.shortcuts import render, redirect
-from django.http import JsonResponse
-from .models import BookTestRode
 
 def book_test_ride(request):
     if request.method == 'POST':
@@ -122,18 +111,14 @@ def success_view(request):
     return render(request, 'success.html')
 
 
-from django.shortcuts import render
+
 
 def custom_404_view(request, exception):
     return render(request, '404.html', status=404)
 
 
 
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.shortcuts import render
-from django.utils import timezone
-from datetime import timedelta
-from .models import BlogPost
+
 
 def blogs(request):
     # Get all blog posts and order them by click_count in descending order
@@ -180,7 +165,7 @@ def blogs(request):
 
 
 
-from django.shortcuts import get_object_or_404
+
 
 def blogs_details(request, slug):  # Change post_id to slug
     # Get the blog post based on its slug
@@ -201,9 +186,7 @@ def blogs_details(request, slug):  # Change post_id to slug
 
 
 
-from django.shortcuts import render, get_object_or_404, redirect
-from .models import Job
-from .forms import ApplicationForm
+
 
 def job_list(request):
     jobs = Job.objects.all()
@@ -231,9 +214,7 @@ def job_detail(request, pk):
 #     else:
 #         form = ApplicationForm()
 #     return render(request, 'apply_for_job.html', {'form': form, 'job': job})
-from django.shortcuts import render, get_object_or_404, redirect
-from .models import Job
-from .forms import ApplicationForm
+
 
 def apply_for_job(request, pk):
     job = get_object_or_404(Job, pk=pk)

@@ -115,15 +115,35 @@
                             {% comment %} <a href="#"><i class="fa fa-pinterest fa-lg"></i></a> {% endcomment %}
                             <a href="https://www.instagram.com/ecoyan_ev_pvt_ltd/"><i class="fa fa-instagram fa-lg"></i></a>
                         </div>
+
+                        <style>
+                            .goog-te-gadget-simple {
+                                background-color: #121212;
+                                border-left: 100px solid #000;
+                                border-top: 8px solid #000;
+                                border-bottom: 1px solid #000;
+                                border-right: 1px solid #000;
+                                font-size: 10pt;
+                                display: inline-block;
+                                padding-top: 1px;
+                                padding-bottom: 2px;
+                            }    
+                        </style>
                         <div id="google_element"></div>
-                            <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                            <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"defer></script>
                             <script>
-                                function loadGoogleTranslate(){
-                                    new google.translate.TranslateElement("google_element");
+                                function loadGoogleTranslate() {
+                                    new google.translate.TranslateElement({
+                                        pageLanguage: 'en',
+                                        includedLanguages: 'as,bn,brx,doi,gu,hi,kn,ks,kok,mai,ml,mni-Mtei,mr,ne,or,pa,sa,sat,sd,ta,te,ur', // Add other languages you want to support
+                                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                                    }, 'google_element');
                                 }
                             </script>
                     </div>  
                     <div class="clearfix"></div>
+
+
                 </div>
             </div>
             <div class="container">
@@ -135,8 +155,8 @@
                                     <!-- logo begin -->
                                     <div id="logo">
                                         <a href="/">
-                                            <img class="logo-1" src="{% static 'images/logo.png' %}" alt="">
-                                            <img class="logo-2" src="{% static 'images/logo.png' %}" alt="">
+                                            <img class="logo-1" src="{% static 'images/logo.svg' %}" alt="">
+                                            <img class="logo-2" src="{% static 'images/logo.svg' %}" alt="">
                                         </a>
                                     </div>
                                     <!-- logo close -->
@@ -308,7 +328,7 @@
                             <div class="de-flex">
                                 <div class="de-flex-col">
                                     <a href="/">
-                                        Copyright © Ecoyan 2024-V3
+                                        Copyright © Ecoyan 2024-V3.1
                                     </a>
                                 </div>
                                 <ul class="menu-simple">

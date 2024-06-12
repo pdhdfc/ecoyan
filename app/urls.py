@@ -2,11 +2,13 @@
 
 from django.urls import path
 from django.http import HttpResponse
-
-# Import your views module
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.urls import path
+from django.http import HttpResponse
+# Import your views module
+
 # Define a view to serve the sitemap.xml file
 def sitemap_xml(request):
     # Read the sitemap.xml file
@@ -14,9 +16,7 @@ def sitemap_xml(request):
         sitemap_xml = file.read()
     return HttpResponse(sitemap_xml, content_type='application/xml')
 
-from django.urls import path
-from django.http import HttpResponse
-from django.conf.urls import handler404
+
 # Define a view to serve the robots.txt file
 def robots_txt(request):
     # Read the robots.txt file

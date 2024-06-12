@@ -1,4 +1,9 @@
 from django.db import models
+from django.utils.text import slugify
+from ckeditor.fields import RichTextField
+from django.urls import reverse
+
+
 
 class ContactMessage(models.Model):
     name = models.CharField(max_length=100)
@@ -10,7 +15,7 @@ class ContactMessage(models.Model):
     def __str__(self):
         return self.name
 
-from django.db import models
+
 
 class BookTestRode(models.Model):
     ANDHRA_PRADESH = 'AP'
@@ -103,12 +108,10 @@ class BookTestRode(models.Model):
 
 
 
-from django.utils.text import slugify
-from ckeditor.fields import RichTextField
-from django.urls import reverse
+
 
 class BlogPost(models.Model):
-    image = models.ImageField(upload_to='blog/image', blank=True, null=True)
+    image = models.ImageField(upload_to='blog/images/', blank=True, null=True)
     title = models.CharField(max_length=200)
     content_sort = models.CharField(max_length=200)
     content = RichTextField()
@@ -132,7 +135,7 @@ class BlogPost(models.Model):
 
 
 
-from django.db import models
+
 
 class Job(models.Model):
     title = models.CharField(max_length=255)

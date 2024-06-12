@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "image",
-                    models.ImageField(blank=True, null=True, upload_to="blog/image"),
+                    models.ImageField(blank=True, null=True, upload_to="blog/image/"),
                 ),
                 ("title", models.CharField(max_length=200)),
                 ("content_sort", models.CharField(max_length=200)),

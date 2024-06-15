@@ -50,14 +50,14 @@
 
                     
                     {% for post in trending_posts_page %}
-                    <a href="{% url 'blog_details' slug=post.slug %}">
+                    <a href="{% url 'blogpost_detail' slug=post.slug %}">
                     <div class="card border-0 bg-white rounded-0 border-bottom brd-gray pb-3 mb-3">
                         <div class="card-1">
                         <div class="row">
 
                             <div class="col-lg-5">
                                 <div class="img img-cover">
-                                <a href="{% url 'blog_details' slug=post.slug %}" class="card-title h4 mt-3">
+                                <a href="{% url 'blogpost_detail' slug=post.slug %}" class="card-title h4 mt-3">
                                     <img src="{{ post.image.url }}" class="img-fluid rounded" alt="...">
                                 </a>
                                 </div>
@@ -69,8 +69,8 @@
                                         <i class="bi bi-clock me-1"></i>
                                         <a href="#" class="op-8">{{ post.date }}</a>
                                     </small>
-                                    <a href="{% url 'blog_details' slug=post.slug %}" class="card-title h4 mt-3">{{ post.title }}</a>
-                                    <a href="{% url 'blog_details' slug=post.slug %}" class="card-title h4 mt-3">
+                                    <a href="{% url 'blogpost_detail' slug=post.slug %}" class="card-title h4 mt-3">{{ post.title }}</a>
+                                    <a href="{% url 'blogpost_detail' slug=post.slug %}" class="card-title h4 mt-3">
                                         
                                     
                                     <p class="fs-13px color-666 mt-2">{{ post.content_sort }}</p>
@@ -185,7 +185,7 @@
 
                     <!-- New Posts -->
                     {% for post in new_posts_page %}
-                    <a href="{% url 'blog_details' slug=post.slug %}">
+                    <a href="{% url 'blogpost_detail' slug=post.slug %}">
                     <div class="card border-0 bg-white rounded-0 border-bottom brd-gray pb-3 mb-3">
                         
                         <div class="card-1">
@@ -193,7 +193,7 @@
                             <div class="col-lg-5">
                                 <div class="img img-cover">
 
-                                    <a href="{% url 'blog_details' slug=post.slug %}" class="card-title h4 mt-3">
+                                    <a href="{% url 'blogpost_detail' slug=post.slug %}" class="card-title h4 mt-3">
                                         <img src="{{ post.image.url }}" class="img-fluid rounded" alt="...">
                                     </a>
                                 
@@ -208,9 +208,9 @@
                                         <a href="#" class="op-8">{{ post.date }}</a>
                                     </small>
 
-                                    <a href="{% url 'blog_details' slug=post.slug %}" class="card-title h4 mt-3">{{ post.title }}</a>
+                                    <a href="{% url 'blogpost_detail' slug=post.slug %}" class="card-title h4 mt-3">{{ post.title }}</a>
 
-                                    <a href="{% url 'blog_details' slug=post.slug %}" class="card-title h4 mt-3">
+                                    <a href="{% url 'blogpost_detail' slug=post.slug %}" class="card-title h4 mt-3">
                                         
                                     
                                         <p class="fs-13px color-666 mt-2">{{ post.content_sort }}</p>

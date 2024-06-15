@@ -121,19 +121,15 @@ class BlogPost(models.Model):
     slug = models.SlugField(unique=True, max_length=200, null=True, blank=True)
 
     def save(self, *args, **kwargs):
-        # Generate slug automatically if not provided
         if not self.slug:
-            self.slug = slugify(self.title.replace(" ", "-"))  # Replace spaces with hyphens
+            self.slug = slugify(self.title.replace(" ", "-"))
         super().save(*args, **kwargs)
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('blogpost_detail', args=[self.id])
-    
-
-
+        return reverse('blogpost_detail', args=[self.slug])  # Ensure this matches the URL name
 
 
 
@@ -142,9 +138,21 @@ class Job(models.Model):
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     is_open = models.BooleanField(default=True)  # Add this line
+    slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)  # Add slug field
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title.replace(" ", "-"))
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.title
+    
+    def get_absolute_url(self):
+        return reverse('job_detail', args=[self.slug])
+
+
+
 
 class Application(models.Model):
     job = models.ForeignKey(Job, on_delete=models.CASCADE, related_name='applications')

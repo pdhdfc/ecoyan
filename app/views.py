@@ -120,6 +120,12 @@ def custom_404_view(request, exception):
 
 
 
+from django.shortcuts import render, get_object_or_404
+from .models import BlogPost
+from django.utils import timezone
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from datetime import timedelta
+
 def blogs(request):
     # Get all blog posts and order them by click_count in descending order
     blog_posts = BlogPost.objects.order_by('-click_count', '-date')
@@ -163,10 +169,6 @@ def blogs(request):
 
     return render(request, 'blogs.html', context)
 
-
-
-
-
 def blogs_details(request, slug):  # Change post_id to slug
     # Get the blog post based on its slug
     blog_post = get_object_or_404(BlogPost, slug=slug)
@@ -188,15 +190,16 @@ def blogs_details(request, slug):  # Change post_id to slug
 
 
 
+
 def job_list(request):
     jobs = Job.objects.all()
     return render(request, 'careers.html', {'jobs': jobs})
 
 
 
-def job_detail(request, pk):
+def job_detail(request, slug):
     try:
-        job = Job.objects.get(pk=pk)
+        job = get_object_or_404(Job, slug=slug)
     except Job.DoesNotExist:
         job = None
     return render(request, 'job_detail.html', {'job': job})
@@ -216,8 +219,8 @@ def job_detail(request, pk):
 #     return render(request, 'apply_for_job.html', {'form': form, 'job': job})
 
 
-def apply_for_job(request, pk):
-    job = get_object_or_404(Job, pk=pk)
+def apply_for_job(request, slug):
+    job = get_object_or_404(Job, slug=slug)
     if not job.is_open:
         return render(request, 'job_closed.html', {'job': job})
     if request.method == 'POST':
@@ -226,7 +229,7 @@ def apply_for_job(request, pk):
             application = form.save(commit=False)
             application.job = job
             application.save()
-            return redirect('job_detail', pk=job.pk)
+            return redirect('job_detail', slug=job.slug)
     else:
         form = ApplicationForm()
     return render(request, 'apply_for_job.html', {'form': form, 'job': job})

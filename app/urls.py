@@ -7,15 +7,26 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 from django.http import HttpResponse
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import BlogPostSitemap
 # Import your views module
 
 # Define a view to serve the sitemap.xml file
-def sitemap_xml(request):
-    # Read the sitemap.xml file
-    with open('sitemap.xml', 'r') as file:
-        sitemap_xml = file.read()
-    return HttpResponse(sitemap_xml, content_type='application/xml')
+# def sitemap_xml(request):
+#     # Read the sitemap.xml file
+#     with open('sitemap.xml', 'r') as file:
+#         sitemap_xml = file.read()
+#     return HttpResponse(sitemap_xml, content_type='application/xml')
 
+
+from .sitemaps import StaticViewSitemap, BlogPostSitemap, JobDetailSitemap
+from . import views
+
+sitemaps = {
+    'static': StaticViewSitemap,
+    'blog': BlogPostSitemap,
+    'jobs': JobDetailSitemap,
+}
 
 # Define a view to serve the robots.txt file
 def robots_txt(request):
@@ -41,16 +52,18 @@ urlpatterns = [
     path('golf_cart', views.golf_cart, name='golf_cart'),
     # path('car', views.car, name='car'),
     # Define the URL pattern for sitemap.xml
-    path('sitemap.xml', sitemap_xml, name='sitemap_xml'),
+    # path('sitemap.xml', sitemap_xml, name='sitemap_xml'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('robots.txt', robots_txt, name='robots_txt'),
 
     path('blogs', views.blogs, name='blogs'),
     # path('blogs/<int:post_id>/', views.blogs_details, name='blog_details'),
-    path('blogs<slug:slug>', views.blogs_details, name='blog_details'),
+    # path('blogs<slug:slug>', views.blogs_details, name='blog_details'),
+    path('blogs/<slug:slug>', views.blogs_details, name='blogpost_detail'),  # Update this line
     
     path('job_list', views.job_list, name='job_list'),
-    path('job<int:pk>', views.job_detail, name='job_detail'),
-    path('job<int:pk>apply', views.apply_for_job, name='apply_for_job'),
+    path('job/<slug:slug>', views.job_detail, name='job_detail'),
+    path('job/<slug:slug>/apply', views.apply_for_job, name='apply_for_job'),
 
     path('PrivacyPolicy', views.PrivacyPolicy, name='PrivacyPolicy'),
     path('TermsConditions', views.TermsConditions, name='TermsConditions'),

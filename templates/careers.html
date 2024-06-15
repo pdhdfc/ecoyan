@@ -127,7 +127,7 @@
                                 </div>
                                 <div class="box-col box-20 text-right">
                                     {% if job.is_open %}
-                                        <a class="btn btn-primary" href="{% url 'apply_for_job' job.pk %}">Apply</a>
+                                        <a class="btn btn-primary" href="{% url 'apply_for_job' job.slug %}">Apply</a>
                                     {% else %}
                                         <span class="text-muted">Job Closed</span>
                                     {% endif %}

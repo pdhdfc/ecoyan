@@ -8,7 +8,9 @@ from django.conf.urls.static import static
 from django.urls import path
 from django.http import HttpResponse
 from django.contrib.sitemaps.views import sitemap
-from .sitemaps import BlogPostSitemap
+from .sitemaps import *
+from .views import dynamic_view
+from app.views import *
 # Import your views module
 
 # Define a view to serve the sitemap.xml file
@@ -26,6 +28,7 @@ sitemaps = {
     'static': StaticViewSitemap,
     'blog': BlogPostSitemap,
     'jobs': JobDetailSitemap,
+    'dynamicurl':DynamicUrlSitemap
 }
 
 # Define a view to serve the robots.txt file
@@ -68,6 +71,13 @@ urlpatterns = [
     path('PrivacyPolicy', views.PrivacyPolicy, name='PrivacyPolicy'),
     path('TermsConditions', views.TermsConditions, name='TermsConditions'),
     path('product', views.Product, name='product'),
+
+    path('<str:path>', dynamic_view, name='dynamic_view'),
+
+    # path('export/', views.export, name='export'),
+    # path('simple_upload/', views.simple_upload, name='simple_upload'),
+    
+    
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

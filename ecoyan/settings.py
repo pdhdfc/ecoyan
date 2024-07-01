@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     
     'app',
-
+    'import_export',
     'ckeditor',
     'ckeditor_uploader',
     'django.contrib.sitemaps',

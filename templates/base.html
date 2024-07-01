@@ -29,8 +29,8 @@
     <link id="colors" href="{% static 'css/colors/scheme-01.css' %}" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <meta name="description" content="Your trusted partner for e-vehicles  and e-rickshaws in India. As a leading manufacturer, supplier, and service provider, we offer customized solutions with dedicated engineering expertise. Enjoy personalized and professional attention for all your electric vehicle needs. ">
-
+    {% comment %} <meta name="description" content="Your trusted partner for e-vehicles  and e-rickshaws in India. As a leading manufacturer, supplier, and service provider, we offer customized solutions with dedicated engineering expertise. Enjoy personalized and professional attention for all your electric vehicle needs. "> {% endcomment %}
+    <meta name="description" content="{% block meta_description %}Your trusted partner for e-vehicles  and e-rickshaws in India. As a leading manufacturer, supplier, and service provider, we offer customized solutions with dedicated engineering expertise. Enjoy personalized and professional attention for all your electric vehicle needs.{% endblock %}">
     <meta name="keywords" content="electric vehicle price, electric vehicles list, e rickshaw price in india, e rickshaw on road price, e rickshaw price list, e rickshaw manufacturers in bangalore, e rickshaw loader in bangalore, e rickshaw price on road, e rickshaw new model, e rickshaw battery electric, e rickshaw price, e rickshaw, e rickshaw motor price, e rickshaw motor, Electric motor vehicles, Ecoyan, India, ISO 9001:2015, manufacturer, supplier, service provider, engineering, customization, ARAI certified, Karnataka RTO certified, sustainable transportation, green mobility, electric vehicles, EVs, eco-friendly transportation, zero-emission vehicles, electric car technology, battery-powered vehicles, clean energy transportation, electric vehicle industry, electric vehicle innovation">
 
     
@@ -328,7 +328,7 @@
                             <div class="de-flex">
                                 <div class="de-flex-col">
                                     <a href="/">
-                                        Copyright © Ecoyan 2024-V3.1
+                                        Copyright © Ecoyan 2024-V3.3
                                     </a>
                                 </div>
                                 <ul class="menu-simple">

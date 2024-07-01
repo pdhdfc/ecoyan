@@ -15,3 +15,9 @@ class ApplicationForm(forms.ModelForm):
     class Meta:
         model = Application
         fields = ['name', 'email', 'resume', 'cover_letter']
+
+
+class DynamicURLData(forms.Form):
+	class meta:
+		model = DynamicURL
+		fields = '__all__'

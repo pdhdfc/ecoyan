@@ -164,3 +164,14 @@ class Application(models.Model):
 
     def __str__(self):
         return f'{self.name} - {self.job.title}'
+
+
+class DynamicURL(models.Model):
+    path = models.CharField(max_length=255, unique=True)
+    title = models.CharField(max_length=255)
+    meta_description=models.CharField(max_length=5000000000, blank=True, null=True)
+    def __str__(self):
+        return self.path
+    
+    def get_absolute_url(self):
+        return reverse('dynamic_view', args=[self.path])

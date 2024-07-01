@@ -53,3 +53,20 @@ class ApplicationAdmin(admin.ModelAdmin):
             return format_html('<a href="{}" download>Download</a>', obj.resume.url)
         return "No resume uploaded"
     download_resume.short_description = 'Resume'
+
+
+
+
+
+
+
+# @admin.register(DynamicURL)
+# class DynamicURLAdmin(admin.ModelAdmin):
+#     list_display = ('path', 'title')
+#     search_fields = ('path', 'title')
+
+
+from import_export.admin import ImportExportModelAdmin
+@admin.register(DynamicURL)
+class DynamicURLAdmin(ImportExportModelAdmin):
+    list_display = ('path', 'title','meta_description')

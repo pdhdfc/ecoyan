@@ -1,0 +1,1056 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+{{ dynamic_url.title }}
+{% endblock %}
+
+
+{% block meta_description %}{{ dynamic_url.meta_description }}{% endblock %}
+
+{% block content %}
+        
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+                      <style>
+          
+                      #section-hero {
+                        background-image: url('{% static 'images/background/7.jpg' %}'); /* Replace 'your-image-url.jpg' with the path to your image */
+                        background-size: 100% auto;;
+                        background-position: center;
+                    }
+
+                                          * Media query for tablets and smaller devices */
+                      @media (max-width: 992px) {
+                          #section-hero {
+                              background-size: cover;
+                              background-position: center;
+                          }
+                      }
+
+                      /* Media query for smartphones and smaller devices */
+                      @media (max-width: 768px) {
+                          #section-hero {
+                              background-size: cover;
+                              background-position: center;
+                          }
+                      }
+                      @media (max-width: 768px) {
+                        #section-hero {
+                            background-size: 100% auto; /* Fixed width, auto height */
+                            background-position: center bottom; /* Adjust background position as needed */
+                        }
+                    }
+                    
+                      </style>
+                    {% comment %} <section id="section-hero" aria-label="section" class="full-height vertical-center" > {% endcomment %}
+                      <section id="section-hero" aria-label="section" class="full-height vertical-center">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="spacer-double sm-hide"></div>
+                                <div class="col-lg-6">
+                                    <h4><span class="id-color">Powering the Future, One Ride at a Time! </span></h4>
+                                    <div class="spacer-10"></div>
+                                    <h1>Ecoyan: Powering India&#39;s Green Commute Electrically, Efficiently and Effortlessly for You. </h1>
+                                    <div class="hi">
+                                        <p class="lead">“E-rickshaw / E-cart/ E-Vehicles – Approved by Automotive Research Association of India (ARAI)”</p>
+                                    </div>
+                                    <style>
+                                        @media (max-width: 768px) {
+                                            .hi {
+                                                display: none;
+                                            }
+                                        }
+                                    </style>
+                                    <div class="hi">
+                                        <a class="btn-main" href="photos">Explore</a>&nbsp;&nbsp;&nbsp;<a class="btn-main btn-black" href="contact">Connect With Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                
+                
+                {% comment %} <section id="section-hero2" aria-label="section" class="full-height vertical-center section-hero2" style="background-image: url({% static 'images/background/auto1.png' %});">
+                </section>
+                
+                <section id="section-hero3" aria-label="section" class="full-height vertical-center section-hero3" style="background-image: url({% static 'images/background/auto2.png' %});">
+                </section> {% endcomment %}
+                
+                
+
+
+            {% comment %} <section id="section-hero" aria-label="section" class="full-height vertical-center" data-bgimage="url({% static 'images/background/auto3.png' %}) bottom"> {% endcomment %}
+                {% comment %} <div class="container">
+                    <div class="row align-items-center">
+                        <div class="spacer-double sm-hide"></div>
+                        <div class="col-lg-6">
+                            <h4><span class="id-color">A FUTURE READY VEHICLE </span></h4>
+                            <div class="spacer-10"></div>
+                            <h1>Ecoyan: Pioneering Tomorrow's Transportation, Today. </h1>
+                            <p class="lead">“E-rickshaw / E-cart – Approved by Automotive Research Association of India (ARAI) & RTO Karnataka”</p>
+
+                            <a class="btn-main" href="#">Choose a Vehicles</a>&nbsp;&nbsp;&nbsp;<a class="btn-main btn-black" href="#">Connect With Us</a>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <img src="{% static 'images/misc/car-2.png' %}" class="img-fluid" alt="">
+                        </div>
+                        
+                    </div>
+                </div> {% endcomment %}
+            {% comment %} </section> {% endcomment %}
+
+
+
+
+            
+                
+    
+            
+           
+            
+                 <section id="section-img-with-tab" >
+                  <div class="container">
+                      <div class="row align-items-center">
+                          <div class="col-lg-5 offset-lg-7">
+                            <h2>About</h2>
+                            <div class="spacer-20"></div>
+                              
+                              
+                              <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"><p>At Ecoyan, we turn small beginnings into big impacts. As a dynamic team of passionate
+                                  entrepreneurs with expertise in the electrical, automobile, and hardware sectors, we’re set to
+                                  revolutionarise the electric motor vehicle industry. Our journey is powered by the trust we&#39;ve
+                                  earned and our commitment to championing a sustainable and eco-conscious planet. Let&#39;s drive
+                                  forward together and create a cleaner, safer world for future generations.</p></div>
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"><p>Our mission? To bring joy and excitement to the experience of owning and buying electric automobiles. Join us, and let’s electrify the future!</p></div>
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"><p>Spark up your journey with Ecoyan – the dynamic hub of electric motor vehicles based in India!
+                                  As certified trailblazers under ISO 9001:2015, we’re not just manufacturers and suppliers, we’re
+                                  your partners in the electrical revolution..</p></div>
+                               
+                              </div>
+                              
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div class="image-container col-md-6 pull-right" data-bgimage="url({% static 'images/background/about.gif' %}) center"></div> 
+                  
+                  
+                  
+                  
+                 
+  
+              </section>
+            
+
+            <section id="section-cars" class="no-top">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 offset-lg-3 text-center">
+                            <h2>Our Products</h2>
+                            <p>Changing the face of urban transport with eco-friendly, high-performance electric vehicles and
+                              transportation. Be part of the movement today!</p>
+                            <div class="spacer-20"></div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+
+                        <style>
+                            .parent {
+                            
+                              width: 290px;
+                            
+                              height: 300px;
+                            
+                              perspective: 1000px;
+                            
+                            }
+                            
+                            .card {
+                            
+                              height: 100%;
+                            
+                              border-radius: 50px;
+                            
+                              background: linear-gradient(135deg, rgb(0, 255, 214) 0%, rgb(8, 226, 96) 100%);
+                            
+                              transition: all 0.5s ease-in-out;
+                            
+                              transform-style: preserve-3d;
+                            
+                              box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px, rgba(5, 71, 17, 0.2) 0px 25px 25px -5px;
+                            
+                            }
+                            
+                            .glass {
+                            
+                              transform-style: preserve-3d;
+                            
+                              position: absolute;
+                            
+                              inset: 8px;
+                            
+                              border-radius: 55px;
+                            
+                              border-top-right-radius: 100%;
+                            
+                              background: linear-gradient(0deg, rgba(255, 255, 255, 0.349) 0%, rgba(255, 255, 255, 0.815) 100%);
+                            
+                              /* -webkit-backdrop-filter: blur(5px);
+                            
+                              backdrop-filter: blur(5px); */
+                            
+                              transform: translate3d(0px, 0px, 25px);
+                            
+                              border-left: 1px solid white;
+                            
+                              border-bottom: 1px solid white;
+                            
+                              transition: all 0.5s ease-in-out;
+                            
+                            }
+                            
+                            .content {
+                            
+                              padding: 100px 60px 0px 30px;
+                            
+                              transform: translate3d(0, 0, 26px);
+                            
+                            }
+                            
+                            .content .title {
+                            
+                              display: block;
+                            
+                              color: #00894d;
+                            
+                              font-weight: 900;
+                            
+                              font-size: 20px;
+                            
+                            }
+                            
+                            .content .text {
+                            
+                              display: block;
+                            
+                              color: rgba(0, 137, 78, 0.7647058824);
+                            
+                              font-size: 15px;
+                            
+                              margin-top: 20px;
+                            
+                            }
+                            
+                            .bottom {
+                            
+                              padding: 10px 12px;
+                            
+                              transform-style: preserve-3d;
+                            
+                              position: absolute;
+                            
+                              bottom: 20px;
+                            
+                              left: 20px;
+                            
+                              right: 20px;
+                            
+                              display: flex;
+                            
+                              align-items: center;
+                            
+                              justify-content: space-between;
+                            
+                              transform: translate3d(0, 0, 26px);
+                            
+                            }
+                            
+                            .bottom .view-more {
+                            
+                              display: flex;
+                            
+                              align-items: center;
+                            
+                              width: 40%;
+                            
+                              justify-content: flex-end;
+                            
+                              transition: all 0.2s ease-in-out;
+                            
+                            }
+                            
+                            .bottom .view-more:hover {
+                            
+                              transform: translate3d(0, 0, 10px);
+                            
+                            }
+                            
+                            .bottom .view-more .view-more-button {
+                            
+                              background: none;
+                            
+                              border: none;
+                            
+                              color: #00c37b;
+                            
+                              font-weight: bolder;
+                            
+                              font-size: 12px;
+                            
+                            }
+                            
+                            .bottom .view-more .svg {
+                            
+                              fill: none;
+                            
+                              stroke: #00c37b;
+                            
+                              stroke-width: 3px;
+                            
+                              max-height: 15px;
+                            
+                            }
+                            
+                            .bottom .social-buttons-container {
+                            
+                              display: flex;
+                            
+                              gap: 10px;
+                            
+                              transform-style: preserve-3d;
+                            
+                            }
+                            
+                            .bottom .social-buttons-container .social-button {
+                            
+                              width: 30px;
+                            
+                              aspect-ratio: 1;
+                            
+                              padding: 5px;
+                            
+                              background: rgb(255, 255, 255);
+                            
+                              border-radius: 50%;
+                            
+                              border: none;
+                            
+                              display: grid;
+                            
+                              place-content: center;
+                            
+                              box-shadow: rgba(5, 71, 17, 0.5) 0px 7px 5px -5px;
+                            
+                            }
+                            
+                            .bottom .social-buttons-container .social-button:first-child {
+                            
+                              transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s;
+                            
+                            }
+                            
+                            .bottom .social-buttons-container .social-button:nth-child(2) {
+                            
+                              transition: transform 0.2s ease-in-out 0.6s, box-shadow 0.2s ease-in-out 0.6s;
+                            
+                            }
+                            
+                            .bottom .social-buttons-container .social-button:nth-child(3) {
+                            
+                              transition: transform 0.2s ease-in-out 0.8s, box-shadow 0.2s ease-in-out 0.8s;
+                            
+                            }
+                            
+                            .bottom .social-buttons-container .social-button .svg {
+                            
+                              width: 15px;
+                            
+                              fill: #00894d;
+                            
+                            }
+                            
+                            .bottom .social-buttons-container .social-button:hover {
+                            
+                              background: black;
+                            
+                            }
+                            
+                            .bottom .social-buttons-container .social-button:hover .svg {
+                            
+                              fill: white;
+                            
+                            }
+                            
+                            .bottom .social-buttons-container .social-button:active {
+                            
+                              background: rgb(255, 234, 0);
+                            
+                            }
+                            
+                            .bottom .social-buttons-container .social-button:active .svg {
+                            
+                              fill: black;
+                            
+                            }
+                            
+                            .logo {
+                            
+                              position: absolute;
+                            
+                              right: 0;
+                            
+                              top: 0;
+                            
+                              transform-style: preserve-3d;
+                            
+                            }
+                            
+                            .logo .circle {
+                            
+                              display: block;
+                            
+                              position: absolute;
+                            
+                              aspect-ratio: 1;
+                            
+                              border-radius: 50%;
+                            
+                              top: 0;
+                            
+                              right: 0;
+                            
+                              box-shadow: rgba(100, 100, 111, 0.2) -10px 10px 20px 0px;
+                            
+                              -webkit-backdrop-filter: blur(5px);
+                            
+                              backdrop-filter: blur(5px);
+                            
+                              background: rgba(0, 249, 203, 0.2);
+                            
+                              transition: all 0.5s ease-in-out;
+                            
+                            }
+                            
+                            .logo .circle1 {
+                            
+                              width: 170px;
+                            
+                              transform: translate3d(0, 0, 20px);
+                            
+                              top: 8px;
+                            
+                              right: 8px;
+                            
+                            }
+                            
+                            .logo .circle2 {
+                            
+                              width: 140px;
+                            
+                              transform: translate3d(0, 0, 40px);
+                            
+                              top: 10px;
+                            
+                              right: 10px;
+                            
+                              -webkit-backdrop-filter: blur(1px);
+                            
+                              backdrop-filter: blur(1px);
+                            
+                              transition-delay: 0.4s;
+                            
+                            }
+                            
+                            .logo .circle3 {
+                            
+                              width: 110px;
+                            
+                              transform: translate3d(0, 0, 60px);
+                            
+                              top: 17px;
+                            
+                              right: 17px;
+                            
+                              transition-delay: 0.8s;
+                            
+                            }
+                            
+                            .logo .circle4 {
+                            
+                              width: 80px;
+                            
+                              transform: translate3d(0, 0, 80px);
+                            
+                              top: 23px;
+                            
+                              right: 23px;
+                            
+                              transition-delay: 1.2s;
+                            
+                            }
+                            
+                            .logo .circle5 {
+                            
+                              width: 50px;
+                            
+                              transform: translate3d(0, 0, 100px);
+                            
+                              top: 30px;
+                            
+                              right: 30px;
+                            
+                              display: grid;
+                            
+                              place-content: center;
+                            
+                              transition-delay: 1.6s;
+                            
+                            }
+                            
+                            .logo .circle5 .svg {
+                            
+                              width: 20px;
+                            
+                              fill: white;
+                            
+                            }
+                            
+                            .parent:hover .card {
+                            
+                              transform: rotate3d(1, 1, 0, 30deg);
+                            
+                              box-shadow: rgba(5, 71, 17, 0.3) 30px 50px 25px -40px, rgba(5, 71, 17, 0.1) 0px 25px 30px 0px;
+                            
+                            }
+                            
+                            .parent:hover .card .bottom .social-buttons-container .social-button {
+                            
+                              transform: translate3d(0, 0, 50px);
+                            
+                              box-shadow: rgba(5, 71, 17, 0.2) -5px 20px 10px 0px;
+                            
+                            }
+                            
+                            .parent:hover .card .logo .circle2 {
+                            
+                              transform: translate3d(0, 0, 60px);
+                            
+                            }
+                            
+                            .parent:hover .card .logo .circle3 {
+                            
+                              transform: translate3d(0, 0, 80px);
+                            
+                            }
+                            
+                            .parent:hover .card .logo .circle4 {
+                            
+                              transform: translate3d(0, 0, 100px);
+                            
+                            }
+                            
+                            .parent:hover .card .logo .circle5 {
+                            
+                              transform: translate3d(0, 0, 120px);
+                            
+                            }
+                            </style>
+
+
+                            <div class="row">
+                              <div class="col-lg-3 col-md-3 col-sm-6">
+                                <a href="e_rickshaw" class="product-link">
+                                  <div class="product">
+                                    <div class="card">
+                                      <img src="https://i.ibb.co/qdHzYgY/e-rickshaw.png" alt="E-Rickshaw" class="img-fluid">
+                                      <div class="center">
+                                        <h3>E-Rickshaw</h3>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            
+                              <div class="col-lg-3 col-md-3 col-sm-6">
+                                <a href="e_cargo" class="product-link">
+                                  <div class="product">
+                                    <div class="card">
+                                      <img src="https://i.ibb.co/jWtf4fd/e-cargo.png" alt="E-Cargo" class="img-fluid">
+                                      <div class="center">
+                                        <h3>E-Cargo</h3>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            
+                              <div class="col-lg-3 col-md-3 col-sm-6">
+                                <a href="e_garbage" class="product-link">
+                                  <div class="product">
+                                    <div class="card">
+                                      <img src="https://i.ibb.co/1R6ws5s/E-Garbage.png" alt="E-Garbage" class="img-fluid">
+                                      <div class="center">
+                                        <h3>E-Garbage</h3>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            
+                              <div class="col-lg-3 col-md-3 col-sm-6">
+                                <a href="golf_cart" class="product-link">
+                                  <div class="product">
+                                    <div class="card">
+                                      <img src="https://i.ibb.co/Kb0KrZd/Golf-Cart.png" alt="Golf-Cart" class="img-fluid">
+                                      <div class="center">
+                                        <h3>Golf-Cart</h3>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            
+                            <style>
+                              .product img {
+                                padding: -45px; /* This padding doesn't seem necessary, consider removing it */
+                                background: #ffffff;
+                              }
+                            
+                              .center {
+                                text-align: center;
+                              }
+                            </style>
+                            
+
+                            
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </section>
+            
+
+            <section id="section-img-with-tab">
+              <div class="container">
+                <div class="row">
+                  <!-- Video Section -->
+                  <div class="col-lg-6">
+                    <div class="video-container">
+                      <div id="player"></div>
+                    </div>
+                  </div>
+                  <!-- Content Section -->
+                  <div class="col-lg-6">
+                    <div class="content-container">
+                      <h2>Excellence at Every Turn: Our Dedication to Quality</h2>
+                      <div class="spacer-20"></div>
+                      <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                          <p>At Ecoyan, our commitment to excellence extends far beyond just manufacturing environmentally conscious transportation!</p>
+                          <p>We pride ourselves on crafting e-vehicles that not only meet stringent quality standards but also prioritize the comfort and satisfaction of our customers. In an era of collective eco-consciousness, we stand at the forefront, pioneering a new wave of sustainable transportation. Each vehicle is meticulously designed to provide not just transportation, but a seamless and enjoyable experience. We ensure every journey is a testament to our dedication to both quality and an environmental revolution. Join us as we redefine the future of mobility, one eco-friendly ride at a time.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <style>
+              .video-container {
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 aspect ratio */
+                height: 0;
+                overflow: hidden;
+                margin-bottom: 20px;
+              }
+            
+              .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              }
+            
+              .content-container {
+                padding: 0 20px;
+              }
+            
+              @media only screen and (max-width: 768px) {
+                .video-container,
+                .col-lg-6 {
+                  width: 100%;
+                }
+            
+                .content-container {
+                  padding: 0;
+                }
+              }
+            </style>
+            
+            <script>
+              // Load the YouTube IFrame Player API code asynchronously
+              var tag = document.createElement('script');
+              tag.src = 'https://www.youtube.com/iframe_api';
+              var firstScriptTag = document.getElementsByTagName('script')[0];
+              firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            
+              var player;
+              function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                  height: '315',
+                  width: '100%', // Set width to 100% for responsiveness
+                  videoId: '3GZ6L4FvwXY', // Replace this with your video ID
+                  playerVars: {
+                    'autoplay': 1,
+                    'controls': 0,
+                    'showinfo': 0,
+                    'rel': 0,
+                    'loop': 1
+                  },
+                  events: {
+                    'onReady': onPlayerReady
+                  }
+                });
+              }
+            
+              function onPlayerReady(event) {
+                event.target.mute(); // Mute the player (optional)
+              }
+            </script>
+            
+            
+
+            <section>
+                <div class="container">
+                  <h2>What makes us Unique:
+                  </h2></br></br>
+                    <div class="row">
+                    
+                    <div class="col-md-3">
+                        <i class="fa fa-rocket de-icon mb20"></i>
+                        <h4>Best in class-power (1200 watt motor)</h4>
+                        <p>Experience unmatched performance with Ecoyan&#39;s best-in-class 1200-watt motor. While
+                          others offer 1000 watts, our powerful motor ensures superior speed, efficiency, and
+                          reliability for a smoother, more exhilarating ride every time.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="fa fa-battery de-icon mb20"></i>
+                        <h4>Spectacular Battery Life</h4>
+                        <p>Enjoy long-lasting power with Ecoyan&#39;s e-vehicles, delivering
+                          over 80 kilometers on a single full charge. Experience the freedom of extended range,
+                          ensuring your journeys are uninterrupted and efficient.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="fa fa-industry de-icon mb20"></i>
+                        <h4>State-of-the-art manufacturing</h4>
+                        <p>Crafted with cutting-edge precision, Ecoyan&#39;s e-vehicles undergo rigorous safety
+                          tests to ensure top-tier reliability. Experience the thrill of state-of-the-art manufacturing
+                          where every detail is fine-tuned for your ultimate peace of mind and enjoyment!</p>
+                    </div>
+                    <div class="col-md-3">
+                      <i class="fa fa-certificate de-icon mb20"></i>
+                      <h4>ARAI Certified</h4>
+                      <p>ARAI's meticulous licensing and approval process stands as a robust assurance of quality, endorsing Ecoyan's e-vehicles as exemplars of innovation and reliability. We are committed to adhering stringent standards and passionately deliver  eco-friendly mobility and transportation solutions of unparalleled excellence.</p>
+                  </div>
+                </div>
+                </div>
+            </section>
+            {% comment %} <style>
+
+
+              .center-image {
+                  display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+              }
+              
+          </style>
+          
+          
+          <img src="https://neilpatel.com/wp-content/uploads/2021/03/Testimonial-Examples_Featured-Image.png" alt="Your Image" class="center-image">
+<style>
+          .cvfgvf {
+        width: 1920px;
+        height: 1080px;
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+<img src="{% static 'images/ttttttt.png' %}" alt="Your Image" class="cvfgvf">
+             {% endcomment %}
+          
+          <section aria-label="section">
+              <div class="container">
+                      <div class="row g-custom-x">
+                          
+                          <div class="col-lg-8 mb-sm-30">
+      
+                           <h3>Do you have any question?</h3>
+                          
+                           <form name="contactForm" id="contact_form" class="form-border" method="post" action="#">
+                              {% csrf_token %}
+                              <div class="row">
+                                  <div class="col-md-4 mb10">
+                                      <div class="field-set">
+                                          <input type="text" name="Name" id="name" class="form-control" placeholder="Your Name" required>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-4 mb10">
+                                      <div class="field-set">
+                                          <input type="email" name="Email" id="email" class="form-control" placeholder="Your Email" required>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-4 mb10">
+                                      <div class="field-set">
+                                          <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone" required>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <div class="field-set mb20">
+                                  <textarea name="message" id="message" class="form-control" placeholder="Your Message" required></textarea>
+                              </div>
+                              <div class="g-recaptcha" data-sitekey="6LdW03QgAAAAAJko8aINFd1eJUdHlpvT4vNKakj6"></div>
+                              <div id='submit' class="mt20">
+                                  <input type='submit' id='send_message' value='Send Message' class="btn-main">
+                              </div>
+                            </br></br></br>
+                              <div id="success_message" class='success'>
+                                  Your message has been sent successfully. Refresh this page if you want to send more messages.
+                              </div>
+                              <div id="error_message" class='error'>
+                                  Sorry there was an error sending your form.
+                              </div>
+                          </form>
+                          
+                      </div>
+                      
+                      <div class="col-lg-4">
+                        <img src="{% static 'images/background/sendm.gif' %}" alt="Description of the image" class="img-fluid">
+                    </div>
+                    
+
+
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.093387034849!2d77.6792862760221!3d12.837241617807706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6cf60a4c9b0b%3A0x25a968a4fe89666d!2sEcoyan%20Electric%20Motor%20Vehicles%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1715932236129!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                  </div>
+      
+          </section>
+
+
+            {% comment %} <section id="section-testimonials" class="no-top no-bottom">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="de-image-text">
+                                <div class="d-text">
+                                    <div class="d-quote id-color"><i class="fa fa-quote-right"></i></div>
+                                    <h4>Excellent Service! Car Rent Service!</h4>
+                                    <blockquote>
+                                       I have been using ecoyan for my Car Rental needs for over 5 years now. I have never had any problems with their service. Their customer support is always responsive and helpful. I would recommend ecoyan to anyone looking for a reliable Car Rental provider.
+                                       <span class="by">Stepanie Hutchkiss</span>
+                                   </blockquote>
+                                </div> 
+                                <img src="{% static 'images/testimonial/1.jpg' %}" class="img-fluid" alt="">
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <div class="de-image-text">
+                                <div class="d-text">
+                                    <div class="d-quote id-color"><i class="fa fa-quote-right"></i></div>
+                                    <h4>Excellent Service! Car Rent Service!</h4>
+                                    <blockquote>
+                                       We have been using ecoyan for our trips needs for several years now and have always been happy with their service. Their customer support is Excellent Service! and they are always available to help with any issues we have. Their prices are also very competitive.
+                                       <span class="by">Jovan Reels</span>
+                                   </blockquote>
+                                </div>
+                                <img src="{% static 'images/testimonial/2.jpg' %}" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="de-image-text">
+                                <div class="d-text">
+                                    <div class="d-quote id-color"><i class="fa fa-quote-right"></i></div>
+                                    <h4>Excellent Service! Car Rent Service!</h4>
+                                    <blockquote>
+                                       Endorsed by industry experts, ecoyan is the Car Rental solution you can trust. With years of experience in the field, we provide fast, reliable and secure Car Rental services.
+                                       <span class="by">Kanesha Keyton</span>
+                                   </blockquote>
+                                </div>
+                                <img src="{% static 'images/testimonial/3.jpg' %}" class="img-fluid" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section> {% endcomment %}
+            {% comment %} 
+            <section id="section-news">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 offset-lg-3 text-center">
+                            <h2>Latest News</h2>
+                            <p>Breaking news, fresh perspectives, and in-depth coverage - stay ahead with our latest news, insights, and analysis.</p>
+                            <div class="spacer-20"></div>
+                        </div>
+                        
+                        <div class="col-lg-4 mb10">
+                                    <div class="bloglist s2 item">
+                                            <div class="post-content">
+                                                <div class="post-image">
+                                                    <div class="date-box">
+                                                        <div class="m">10</div>
+                                                        <div class="d">MAR</div>
+                                                    </div>
+                                                    <img alt="" src="{% static 'images/news/pic-blog-1.jpg' %}" class="lazy">
+                                                </div>
+                                                <div class="post-text">                                                    
+                                                    <h4><a href="news-single.html">Enjoy Best Travel Experience<span></span></a></h4>
+                                                    <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur.</p>
+                                                    <a class="btn-main" href="#">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                
+                                <div class="col-lg-4 mb10">
+                                    <div class="bloglist s2 item">
+                                            <div class="post-content">
+                                                <div class="post-image">
+                                                    <div class="date-box">
+                                                        <div class="m">12</div>
+                                                        <div class="d">MAR</div>
+                                                    </div>
+                                                    <img alt="" src="{% static 'images/news/pic-blog-2.jpg' %}" class="lazy">
+                                                </div>
+                                                <div class="post-text">                                                    
+                                                    <h4><a href="news-single.html">The Future of Car Rent<span></span></a></h4>
+                                                    <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur.</p>
+                                                    <a class="btn-main" href="#">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                
+                        <div class="col-lg-4 mb10">
+                        <div class="bloglist s2 item">
+                                <div class="post-content">
+                                    <div class="post-image">
+                                        <div class="date-box">
+                                            <div class="m">14</div>
+                                            <div class="d">MAR</div>
+                                        </div>
+                                        <img alt="" src="{% static 'images/news/pic-blog-3.jpg' %}" class="lazy">
+                                    </div>
+                                    <div class="post-text">                                                    
+                                        <h4><a href="news-single.html">Holiday Tips For Backpacker<span></span></a></h4>
+                                        <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur.</p>
+                                        <a class="btn-main" href="#">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> {% endcomment %}
+
+            <section id="section-fun-facts" class="bg-color text-light">
+                <div class="container">
+                  {% comment %} <div class="row g-custom-x force-text-center"> 4 box {% endcomment %}
+                    <div class="row g-custom-x text-center justify-content-center">
+                        <div class="col-md-3 col-sm-6 mb-sm-30">
+                            <div class="de_count wow fadeInUp">
+                                <h3 class="timer" data-to="8" data-speed="3000">8+ </h3>
+                                YEARS OF SUCCESSFUL OPERATIONS:
+
+                                <p class="d-small">With over 8 years of successful operations, Ecoyan has consistently delivered excellence in electric mobility. Trusted by many, our experience speaks volumes about our commitment to quality and innovation
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-sm-30">
+                            <div class="de_count wow fadeInUp">
+                                <h3 class="timer" data-to="1000" data-speed="3000">1000+</h3>
+                                VEHICLES CREATING A GREEN IMPACT:
+
+                                <p class="d-small">Zooming past the 1000+ vehicles making a green and clean impact, Ecoyan is driving a vibrant ecological revolution. Jump aboard and be part of our eco-conscious journey towards a greener tomorrow!
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-sm-6 mb-sm-30">
+                            <div class="de_count wow fadeInUp">
+                                <h3 class="timer" data-to="10" data-speed="3000">10+</h3>
+                                GOVT AGENCIES TRUSTING OUR PRODUCTS:
+                                <p class="d-small">With a strong trust from over 10 government agencies, Ecoyan's products shine as beacons of reliability and innovation. Join the ranks of those who trust us to lead the way to a sustainable future!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section aria-label="section" class="pt40 pb40 text-light" data-bgcolor="white">
+                <div class="wow fadeInRight d-flex">
+                  <div class="de-marquee-list">
+                    <div class="d-item">
+                      <span class="d-item-txt">E-RICKSHAW</span>
+                      <span class="d-item-display">
+                        <i class="d-item-dot"></i>
+                      </span>
+                      <span class="d-item-txt">E-CARGO</span>
+                      <span class="d-item-display">
+                        <i class="d-item-dot"></i>
+                      </span>
+                      <span class="d-item-txt">E-GARBAGE</span>
+                      <span class="d-item-display">
+                        <i class="d-item-dot"></i>
+                      </span>
+                      <span class="d-item-txt">GOLF CART</span>
+                      <span class="d-item-display">
+                        <i class="d-item-dot"></i>
+                      </span>
+                      {% comment %} <span class="d-item-txt">CAR</span>
+                      <span class="d-item-display">
+                        <i class="d-item-dot"></i>
+                      </span> {% endcomment %}
+                      {% comment %} <span class="d-item-txt">COMPONENTS</span>
+                      <span class="d-item-display">
+                        <i class="d-item-dot"></i>
+                      </span>
+                      <span class="d-item-txt">E-CATALOGUE</span>
+                      <span class="d-item-display">
+                        <i class="d-item-dot"></i>
+                      </span>
+                      <span class="d-item-txt">TEST DRIVE</span>
+                      <span class="d-item-display">
+                        <i class="d-item-dot"></i>
+                      </span> {% endcomment %}
+                      
+                     </div>
+                  </div>
+
+                  
+                </div>
+            </section>
+            
+        </div>
+        <!-- content close -->
+        {% comment %} <a href="#" id="back-to-top"></a> {% endcomment %}
+        <!-- footer begin -->
+    
+        {% endblock %}

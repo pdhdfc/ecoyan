@@ -243,3 +243,73 @@ def TermsConditions(request):
 
 def Product(request):
     return render(request, 'product.html')
+
+
+def dynamic_view(request, path):
+    dynamic_url = get_object_or_404(DynamicURL, path=path)
+    
+    return render(request, 'dynamic_template.html', {'dynamic_url': dynamic_url})
+
+
+
+
+# from django.shortcuts import render
+# from django.http import HttpResponse
+# from .resources import DynamicURLResource
+# from tablib import Dataset
+# from .models import DynamicURL
+
+# # views.py
+
+# from django.http import HttpResponse
+# from django.urls import reverse
+# from django.shortcuts import render
+# from tablib import Dataset
+# from .models import DynamicURL
+# from .resources import DynamicURLResource  # Import your resource
+
+# def export(request):
+#     dynamic_url_resource = DynamicURLResource()
+#     dataset = dynamic_url_resource.export()
+
+#     response = HttpResponse(dataset.xlsx, content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+#     response['Content-Disposition'] = 'attachment; filename="DynamicURLs.xlsx"'
+#     return response
+
+
+# from .models import DynamicURL  # Import your DynamicURL model
+# from tablib import Dataset  # Assuming you're using tablib for dataset handling
+
+# # views.py continued...
+
+# # # views.py
+# # views.py
+
+# from django.shortcuts import render
+# from django.http import HttpResponse
+# from tablib import Dataset
+# from .models import DynamicURL
+
+# def simple_upload(request):
+#     if request.method == 'POST':
+#         if 'myfile' in request.FILES:
+#             new_dynamic_urls = request.FILES['myfile']
+
+#             dataset = Dataset()
+#             imported_data = dataset.load(new_dynamic_urls.read(), format='xlsx')
+
+#             for data in imported_data:
+#                 try:
+#                     dynamic_url = DynamicURL(
+#                         path=data[0],
+#                         title=data[1]
+#                     )
+#                     dynamic_url.save()
+#                 except Exception as e:
+#                     print(f"Error saving data: {str(e)}")
+
+#             return HttpResponse('File uploaded and data saved successfully')
+#         else:
+#             return HttpResponse('No file found in request')
+#     else:
+#         return render(request, 'input.html')

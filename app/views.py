@@ -244,12 +244,9 @@ def TermsConditions(request):
 def Product(request):
     return render(request, 'product.html')
 
-
 def dynamic_view(request, path):
     dynamic_url = get_object_or_404(DynamicURL, path=path)
-    
     return render(request, 'dynamic_template.html', {'dynamic_url': dynamic_url})
-
 
 
 

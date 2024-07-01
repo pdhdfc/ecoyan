@@ -44,4 +44,4 @@ class DynamicUrlSitemap(Sitemap):
         return DynamicURL.objects.all()
 
     def lastmod(self, obj):
-        return obj.path  # Use the created_at field from the Job model
+        return obj.created_at

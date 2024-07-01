@@ -28,7 +28,7 @@ sitemaps = {
     'static': StaticViewSitemap,
     'blog': BlogPostSitemap,
     'jobs': JobDetailSitemap,
-    'dynamicurl':DynamicUrlSitemap
+    'dynamicurl': DynamicUrlSitemap
 }
 
 # Define a view to serve the robots.txt file
@@ -56,7 +56,7 @@ urlpatterns = [
     # path('car', views.car, name='car'),
     # Define the URL pattern for sitemap.xml
     # path('sitemap.xml', sitemap_xml, name='sitemap_xml'),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    # path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('robots.txt', robots_txt, name='robots_txt'),
 
     path('blogs', views.blogs, name='blogs'),
@@ -72,7 +72,9 @@ urlpatterns = [
     path('TermsConditions', views.TermsConditions, name='TermsConditions'),
     path('product', views.Product, name='product'),
 
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('<str:path>', dynamic_view, name='dynamic_view'),
+
 
     # path('export/', views.export, name='export'),
     # path('simple_upload/', views.simple_upload, name='simple_upload'),

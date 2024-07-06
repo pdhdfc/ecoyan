@@ -28,73 +28,74 @@
         <div class="row gx-5">
           <aside class="col-lg-6">
             <div class="border rounded-4 mb-3 d-flex justify-content-center">
-              <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="https://i.ibb.co/qdHzYgY/e-rickshaw.png">
-                <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit" src="https://i.ibb.co/qdHzYgY/e-rickshaw.png" />
-              </a>
+              <img id="main-image" style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit" src="https://i.ibb.co/qdHzYgY/e-rickshaw.png" />
             </div>
-            
-            <!-- thumbs-wrap.// -->
-            <!-- gallery-wrap .end// -->
           </aside>
           <main class="col-lg-6">
             <div class="ps-lg-3">
               <h4 class="title text-dark">
                 E- Rickshaw
               </h4>
-             
-              </div>
-    
-              
-    
-              <p>
-                At Ecoyan, we proudly manufacture and supply top-quality passenger e-rickshaws. Designed for high performance, energy efficiency, and minimal maintenance, our e-rickshaws surpasses industry standards. Each vehicle undergoes rigorous testing and enhancements to guarantee a safe, smooth and enjoyable ride for both passengers and drivers. Experience the future of urban transport with Ecoyan's cutting-edge and high performing e-rickshaws.
-
-              </p>
-    
-              <div class="row">
-                <dt class="col-3">Model:</dt>
-                <dd class="col-9"> E- SHAKTHI</dd>
-    
-                <dt class="col-3">Color</dt>
-                <style>
-                    .color-list {
-                        list-style: none;
-                        padding: 0;
-                      }
-                      
-                      .color-circle {
-                        width: 30px;
-                        height: 30px;
-                        border-radius: 50%;
-                        display: inline-block;
-                        margin-right: 10px;
-                      }
-                      
-                </style>
-                <dd class="col-9">
-                <ul class="color-list">
-                    <li class="color-circle" style="background-color: red;"></li>
-                    <li class="color-circle" style="background-color: green;"></li>
-                    <li class="color-circle" style="background-color: Blue;"></li>
-                    <li class="color-circle" style="background-color: Yellow;"></li>
-                  </ul>
-                </dd>
-                <dt class="col-3">Speed:</dt>
-                <dd class="col-9">25 Km/hr – maximum speed *(as per Government Norms)</dd>
-    
-                <dt class="col-3">Brand</dt>
-                <dd class="col-9">Ecoyan</dd>
-              </div>
-    
-              <hr />
-    
-             
-              
             </div>
+    
+            <p>
+              At Ecoyan, we proudly manufacture and supply top-quality passenger e-rickshaws. Designed for high performance, energy efficiency, and minimal maintenance, our e-rickshaws surpasses industry standards. Each vehicle undergoes rigorous testing and enhancements to guarantee a safe, smooth and enjoyable ride for both passengers and drivers. Experience the future of urban transport with Ecoyan's cutting-edge and high performing e-rickshaws.
+            </p>
+    
+            <div class="row">
+              <dt class="col-3">Model:</dt>
+              <dd class="col-9"> E- SHAKTHI</dd>
+    
+              <dt class="col-3">Color</dt>
+              <style>
+                .color-list {
+                  list-style: none;
+                  padding: 0;
+                }
+    
+                .color-circle {
+                  width: 30px;
+                  height: 30px;
+                  border-radius: 50%;
+                  display: inline-block;
+                  margin-right: 10px;
+                  cursor: pointer;
+                }
+              </style>
+              <dd class="col-9">
+                <ul class="color-list">
+                  <li class="color-circle" style="background-color: red;" onclick="changeImage('red')"></li>
+                  <li class="color-circle" style="background-color: green;" onclick="changeImage('green')"></li>
+                  <li class="color-circle" style="background-color: blue;" onclick="changeImage('blue')"></li>
+                  <li class="color-circle" style="background-color: yellow;" onclick="changeImage('yellow')"></li>
+                </ul>
+              </dd>
+              <dt class="col-3">Speed:</dt>
+              <dd class="col-9">25 Km/hr – maximum speed *(as per Government Norms)</dd>
+    
+              <dt class="col-3">Brand</dt>
+              <dd class="col-9">Ecoyan</dd>
+            </div>
+    
+            <hr />
           </main>
         </div>
       </div>
     </section>
+    
+    <script>
+      function changeImage(color) {
+        var imageUrl = {
+          red: 'https://i.ibb.co/qdHzYgY/e-rickshaw-red.png', // Replace with the actual URL for red image
+          green: 'https://i.ibb.co/RQPhWTg/e-rickshaw-1.png', // Replace with the actual URL for green image
+          blue: 'https://i.ibb.co/LYVrzS3/e-rickshaw.png', // Replace with the actual URL for blue image
+          yellow: 'https://i.ibb.co/qdHzYgY/e-rickshaw-yellow.png' // Replace with the actual URL for yellow image
+        };
+    
+        document.getElementById('main-image').src = imageUrl[color];
+      }
+    </script>
+    
     <!-- content -->
     
     <section class="bg-light border-top py-4">

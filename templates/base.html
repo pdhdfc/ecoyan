@@ -12,7 +12,8 @@
         
         {% endblock %}
     </title>
-    <link rel="icon" href="https://i.ibb.co/846hykV/Untitled-1.png" type="image/gif" sizes="16x16">
+    {% comment %} <link rel="icon" href="https://i.ibb.co/846hykV/Untitled-1.png" type="image/gif" sizes="16x16"> {% endcomment %}
+    <link rel="favicon" type="image/ico"  href="{% static 'images/favicon.ico' %}" >
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     {% comment %} <meta content="ecoyan - Your Trusted Partner for Electric Motor Vehicles in India" name="description"> {% endcomment %}
@@ -175,7 +176,7 @@
                                             <li><a class="menu-item" href="/golf_cart">GOLF CART</a></li>
                                             {% comment %} <li><a class="menu-item" href="car">CAR</a></li> {% endcomment %}
                                             <li><a class="menu-item" href="{% static 'pdf/Components.pdf' %}" target="_blank">COMPONENTS</a></li>
-                                            <li><a class="menu-item" href="{% static 'pdf/Ecoyan_Catalogue.pdf' %}" target="_blank">E-CATALOGUE</a></li>
+                                            <li><a class="menu-item" href="{% static 'pdf/Catalogue.pdf' %}" target="_blank">E-CATALOGUE</a></li>
                                             {% comment %} <li><a class="menu-item" href="contact">TEST DRIVE REQUEST</a></li> {% endcomment %}
                                             
                                         </ul>
@@ -328,7 +329,7 @@
                             <div class="de-flex">
                                 <div class="de-flex-col">
                                     <a href="/">
-                                        Copyright © Ecoyan 2024-V3.3
+                                        Copyright © Ecoyan 2024-V3.4
                                     </a>
                                 </div>
                                 <ul class="menu-simple">
